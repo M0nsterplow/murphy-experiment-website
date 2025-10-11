@@ -195,6 +195,84 @@
             line-height: 1.6;
         }
 
+        .tracklist {
+            background: rgba(245, 230, 211, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid rgba(101, 67, 33, 0.6);
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .track {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid rgba(101, 67, 33, 0.3);
+            transition: all 0.3s;
+        }
+
+        .track:last-child {
+            border-bottom: none;
+        }
+
+        .track:hover {
+            background: rgba(212, 197, 160, 0.5);
+            padding-left: 25px;
+        }
+
+        .track-number {
+            font-weight: bold;
+            color: #5a3a1a;
+            min-width: 40px;
+        }
+
+        .track-title {
+            flex: 1;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        .track-duration {
+            color: #5a3a1a;
+            font-weight: bold;
+        }
+
+        .video-container {
+            background: rgba(245, 230, 211, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid rgba(101, 67, 33, 0.6);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            color: #3d2813;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
         .members {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -282,6 +360,12 @@
             .about-content {
                 padding: 25px;
             }
+
+            .track {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
         }
     </style>
 </head>
@@ -295,6 +379,15 @@
         <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Listen on Bandcamp</a>
         <div class="scroll-indicator">▼</div>
     </header>
+
+    <section id="origin">
+        <h2>The Origin</h2>
+        <div class="about-content">
+            <p>Some bands form in garages. Others in dive bars. The Murphy Experiment? Well, that's a story worth telling...</p>
+            <br>
+            <p>[Tell us your origin story! How did you all meet? What sparked The Murphy Experiment? How did The Plow Monsters come about? Replace this text with your actual story.]</p>
+        </div>
+    </section>
 
     <section id="about">
         <h2>About</h2>
@@ -338,6 +431,70 @@
             </div>
             <br><br>
             <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Stream The Boney Files</a>
+        </div>
+
+        <div class="tracklist">
+            <h3 style="color: #3d2813; text-align: center; margin-bottom: 20px; font-size: 1.8rem;">Track Listing</h3>
+            <div class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">The Search, What's in the Box?</span>
+                <span class="track-duration">1:08</span>
+            </div>
+            <div class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">Too Far North (To Get a Tan)</span>
+                <span class="track-duration">5:12</span>
+            </div>
+            <div class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Making Sense</span>
+                <span class="track-duration">3:00</span>
+            </div>
+            <div class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Thursdays</span>
+                <span class="track-duration">4:01</span>
+            </div>
+            <div class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">CFC Free (Cling Film Figurines) Live at Paddy's</span>
+                <span class="track-duration">4:37</span>
+            </div>
+            <div class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Punch</span>
+                <span class="track-duration">4:12</span>
+            </div>
+            <div class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Idle Bones</span>
+                <span class="track-duration">4:50</span>
+            </div>
+            <div class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Climatize</span>
+                <span class="track-duration">7:31</span>
+            </div>
+            <div class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">Rock Paper Scissors</span>
+                <span class="track-duration">3:36</span>
+            </div>
+            <div class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Cow Theme Parks</span>
+                <span class="track-duration">6:12</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <div class="video-container">
+            <div class="video-title">The Search, What's in the Box?</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Xk8gTfT7JRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
 
