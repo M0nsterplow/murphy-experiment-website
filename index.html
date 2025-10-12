@@ -242,14 +242,19 @@
             font-weight: bold;
         }
 
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
         .video-container {
             background: rgba(245, 230, 211, 0.95);
             padding: 40px;
             border-radius: 20px;
             border: 3px solid rgba(101, 67, 33, 0.6);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            margin: 40px auto;
-            max-width: 800px;
         }
 
         .video-wrapper {
@@ -381,8 +386,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .video-container {
-                max-width: 100%;
+            .videos-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -512,17 +517,19 @@
 
     <section id="videos">
         <h2>Videos</h2>
-        <div class="video-container">
-            <div class="video-title">The Search, What's in the Box?</div>
-            <div class="video-wrapper">
-                <iframe src="https://player.vimeo.com/video/1126403069?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="The Search, What's in the Box?"></iframe>
+        <div class="videos-grid">
+            <div class="video-container">
+                <div class="video-title">The Search, What's in the Box?</div>
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/1126403069?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="The Search, What's in the Box?"></iframe>
+                </div>
             </div>
-        </div>
 
-        <div class="video-container">
-            <div class="video-title">Cow Theme Parks</div>
-            <div class="video-wrapper">
-                <iframe src="https://player.vimeo.com/video/940311827?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Cow Theme Parks"></iframe>
+            <div class="video-container">
+                <div class="video-title">Cow Theme Parks</div>
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/940311827?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Cow Theme Parks"></iframe>
+                </div>
             </div>
         </div>
     </section>
