@@ -242,46 +242,6 @@
             font-weight: bold;
         }
 
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .video-container {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-title {
-            font-size: 1.5rem;
-            color: #3d2813;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: bold;
-        }
-
         .members {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -383,10 +343,6 @@
             }
 
             .members {
-                grid-template-columns: 1fr;
-            }
-
-            .videos-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -515,32 +471,6 @@
         </div>
     </section>
 
-    <section id="videos">
-        <h2>Videos</h2>
-        <div class="videos-grid">
-            <div class="video-container">
-                <div class="video-title">The Search, What's in the Box?</div>
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1126403069?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="The Search, What's in the Box?"></iframe>
-                </div>
-            </div>
-
-            <div class="video-container">
-                <div class="video-title">Too Far North (To Get a Tan)</div>
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1126666770?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Too Far North (To Get a Tan)"></iframe>
-                </div>
-            </div>
-
-            <div class="video-container">
-                <div class="video-title">Cow Theme Parks</div>
-                <div class="video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/940311827?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Cow Theme Parks"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="members">
         <h2>The Band</h2>
         <div class="members">
@@ -587,6 +517,7 @@
         <h2>Connect</h2>
         <div class="social-links">
             <a href="https://themurphyexperiment.bandcamp.com/" class="social-link" target="_blank">Bandcamp</a>
+            <a href="videos.html" class="social-link">Videos</a>
             <a href="#" class="social-link">Instagram</a>
             <a href="#" class="social-link">Facebook</a>
             <a href="#" class="social-link">Email</a>
@@ -601,7 +532,6 @@
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
     </footer>
 
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
