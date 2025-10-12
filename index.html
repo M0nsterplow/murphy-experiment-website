@@ -47,11 +47,14 @@
         }
 
         .logo {
-            max-width: 800px;
-            width: 90%;
+            font-family: 'Courier New', monospace;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #3d2813;
             margin-bottom: 20px;
             animation: pulse 2s infinite;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
         }
 
         @keyframes pulse {
@@ -353,7 +356,7 @@
 
         @media (max-width: 768px) {
             .logo {
-                max-width: 600px;
+                font-size: 2.5rem;
             }
 
             h2 {
@@ -388,7 +391,7 @@
     <div class="stars" id="stars"></div>
 
     <header>
-        <img src="murphy-logo.png" alt="The Murphy Experiment" class="logo">
+        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
         <div class="tagline">Progressive Rock</div>
         <div class="location">Tempe, Arizona • Bangor, Northern Ireland | Est. 2020</div>
         <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Listen on Bandcamp</a>
