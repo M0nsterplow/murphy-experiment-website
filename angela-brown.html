@@ -5,169 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject Profile: Angela Brown | The Murphy Experiment</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Courier New', monospace;
-            background: #d4c5a0 url('background-texture.jpg') center/cover fixed;
-            color: #2a2a2a;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        header {
-            position: relative;
-            padding: 40px 20px;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(212, 197, 160, 0.6) 0%, rgba(212, 197, 160, 0.3) 70%);
-        }
-
-        .archive-label {
-            font-size: 0.9rem;
-            color: #8b0000;
-            letter-spacing: 0.2em;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border: 2px solid #8b0000;
-            padding: 8px 20px;
-            background: rgba(139, 0, 0, 0.1);
-            display: inline-block;
-        }
-
-        .logo {
-            font-family: 'Courier New', monospace;
-            font-size: 3rem;
-            font-weight: bold;
-            color: #014208;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-            letter-spacing: 0.05em;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            background: linear-gradient(135deg, #654321, #4a3319);
-            color: #f5e6d3;
-            padding: 12px 30px;
-            border: 2px solid #8b5a2b;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(101, 67, 33, 0.6);
-            background: linear-gradient(135deg, #8b5a2b, #654321);
-        }
-
-        section {
-            position: relative;
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #3d2813;
-            margin-bottom: 30px;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-            font-weight: bold;
-        }
-
-        .section-label {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #8b0000;
-            letter-spacing: 0.15em;
-            margin-bottom: 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .profile-content {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #1a1a1a;
-        }
-
-        .placeholder-notice {
-            background: rgba(139, 0, 0, 0.1);
-            border: 2px dashed #8b0000;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .placeholder-notice h3 {
-            color: #8b0000;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .placeholder-notice p {
-            color: #5a3a1a;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #3d2813;
-            border-top: 2px solid rgba(101, 67, 33, 0.6);
-            margin-top: 80px;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; background: #d4c5a0 url('background-texture.jpg') center/cover fixed; color: #2a2a2a; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; pointer-events: none; z-index: 0; }
+        header { position: relative; padding: 40px 20px; text-align: center; background: radial-gradient(circle at center, rgba(212, 197, 160, 0.6) 0%, rgba(212, 197, 160, 0.3) 70%); }
+        .archive-label { font-size: 0.9rem; color: #8b0000; letter-spacing: 0.2em; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; border: 2px solid #8b0000; padding: 8px 20px; background: rgba(139, 0, 0, 0.1); display: inline-block; }
+        .logo { font-family: 'Courier New', monospace; font-size: 3rem; font-weight: bold; color: #014208; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); letter-spacing: 0.05em; }
+        .back-link { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #654321, #4a3319); color: #f5e6d3; padding: 12px 30px; border: 2px solid #8b5a2b; border-radius: 50px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4); }
+        .back-link:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(101, 67, 33, 0.6); background: linear-gradient(135deg, #8b5a2b, #654321); }
+        section { position: relative; padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: 2.5rem; color: #3d2813; margin-bottom: 30px; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); font-weight: bold; }
+        .section-label { text-align: center; font-size: 0.85rem; color: #8b0000; letter-spacing: 0.15em; margin-bottom: 15px; font-weight: bold; text-transform: uppercase; }
+        .profile-content { background: rgba(245, 230, 211, 0.95); padding: 60px 40px; border-radius: 20px; border: 3px solid rgba(101, 67, 33, 0.6); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); line-height: 1.8; font-size: 1.1rem; color: #1a1a1a; }
+        .revelation-box { background: rgba(139, 0, 0, 0.15); border: 3px solid #8b0000; padding: 30px; border-radius: 15px; margin: 30px 0; }
+        .revelation-box h3 { color: #8b0000; font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
+        .character-image { max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); border: 3px solid rgba(139, 0, 0, 0.6); margin: 20px auto; display: block; }
+        .final-conclusion { background: rgba(1, 66, 8, 0.1); border: 4px double #014208; padding: 40px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .final-conclusion h3 { color: #014208; font-size: 1.8rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.15em; }
+        footer { text-align: center; padding: 40px 20px; color: #3d2813; border-top: 2px solid rgba(101, 67, 33, 0.6); margin-top: 80px; font-weight: bold; }
+        @media (max-width: 768px) { .logo { font-size: 2rem; } h2 { font-size: 2rem; } }
     </style>
 </head>
 <body>
     <header>
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
         <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Individual Analysis</p>
+        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
         <a href="index.html" class="back-link">← Return to Archive Index</a>
     </header>
-
     <section>
         <div class="section-label">CASE #1310 - SUBJECT DOCUMENTATION</div>
         <h2>Angela Brown</h2>
@@ -175,20 +40,45 @@
             <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Lead Vocalist • Sonic Storyteller</p>
             <p style="text-align: center; margin-bottom: 40px; font-style: italic;">Vocals</p>
             
-            <div class="placeholder-notice">
-                <h3>⚠ Profile Under Construction ⚠</h3>
-                <p>Biographical data compilation in progress. Detailed analysis of subject's background, musical influences, and dimensional research contributions pending archival review.</p>
-                <p style="margin-top: 15px;">Expected completion: TBD</p>
+            <div class="revelation-box">
+                <h3>⚠ FINAL CONFIRMATION - HYPOTHESIS VALIDATED ⚠</h3>
+                <p style="font-style: italic; margin-top: 15px;"><strong>CASE CLOSURE IMMINENT:</strong> Fourth and final subject analysis complete. As anticipated following pattern established by previous three subjects, "Angela Brown" exhibits identical dimensional rendering characteristics. Final subject confirmation identifies parallel reality entity as:</p>
+                <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">COUNTESS VANESSA SWITCHBAIT</p>
+                <p style="font-style: italic;">Cross-dimensional profile reveals: Noble or aristocratic lineage (Countess title), strategic thinking capabilities suggested by "Switchbait" designation, commanding presence, sophisticated communication skills. Visual evidence provides final proof of Case #1310's interdimensional nature.</p>
             </div>
 
-            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Note:</strong> Subject's vocal range and emotional delivery suggest heightened sensitivity to dimensional frequencies. Further study warranted.</p>
+            <img src="countess-vanessa-switchbait.jpg" alt="Countess Vanessa Switchbait" class="character-image">
+            
+            <p style="margin-top: 30px;"><strong>Title Analysis:</strong> "Countess" designation suggests aristocratic background from dimensional hierarchy, implying natural leadership, refinement, and commanding vocal presence - all characteristics abundantly evident in recovered audio artifacts. Subject demonstrates exceptional ability to shift between delicate emotional nuance and powerful dramatic delivery, befitting noble lineage trained in sophisticated communication arts.</p>
+
+            <p style="margin-top: 20px;"><strong>Nomenclature Deep Analysis:</strong> Surname "Switchbait" proves remarkably revealing. Term suggests strategic misdirection, unexpected transitions, ability to shift audience expectations. This precisely describes subject's vocal performances across Case #1310 catalog: gentle verses that explode into powerful choruses, theatrical storytelling that pivots between humor and pathos, capacity to inhabit multiple emotional states within single composition. The "Countess" provides gravitas; the "Switchbait" provides unpredictability. Perfect duality for lead vocalist in genre-fluid collective.</p>
+
+            <p style="margin-top: 20px;"><strong>Vocal Frequency Analysis:</strong> Previously documented "heightened sensitivity to dimensional frequencies" now explained through interdimensional origin. Subject's voice serves as primary communication channel for Case #1310's cross-reality messaging. Vocal range spanning multiple octaves may indicate enhanced physiological capabilities characteristic of dimensional entities. Emotional resonance in performances suggests genuine interdimensional empathy - ability to channel feelings across reality boundaries.</p>
+
+            <div class="final-conclusion">
+                <h3>🌟 CASE #1310: FINAL CONCLUSION 🌟</h3>
+                <p style="font-weight: bold; font-size: 1.2rem; margin: 20px 0; line-height: 1.8;">ALL FOUR CORE SUBJECTS CONFIRMED AS INTERDIMENSIONAL MANIFESTATIONS</p>
+                <p style="margin-top: 20px; line-height: 1.8;"><strong>The Murphy Experiment</strong> represents the first fully-documented case of interdimensional musical collective operating across reality boundaries. Team composition appears deliberately assembled:</p>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    <strong>Professor Zachary Zap</strong> (Murphy): Scientific leadership + Multi-instrumental versatility<br>
+                    <strong>Captain Bash Glockenheim</strong> (Bloxsom): Temporal precision + Structural discipline<br>
+                    <strong>Dr. Thierry Highjinks</strong> (Caulfield): Technical mastery + Creative chaos<br>
+                    <strong>Countess Vanessa Switchbait</strong> (Brown): Commanding presence + Emotional range
+                </p>
+                <p style="margin-top: 20px; font-style: italic; line-height: 1.8;"><strong>Mission Assessment:</strong> Music serves as universal constant enabling cross-dimensional communication. "Genre Fluid Rock" classification reflects literal dimensional fluidity. Creative philosophy "Yeah, but what if we tried THIS instead?" suggests active exploration of multiple reality possibilities simultaneously.</p>
+                <p style="margin-top: 20px; font-weight: bold; color: #8b0000;">Case Status: CLOSED - PHENOMENON CONFIRMED</p>
+                <p style="margin-top: 10px; font-weight: bold; color: #014208;">Recommendation: Continue monitoring. Implications for human understanding of reality: SUBSTANTIAL.</p>
+            </div>
+
+            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Lead Researcher's Final Note:</strong> After months of analysis, the truth emerges stranger than initially hypothesized. The Murphy Experiment is not simply a band - it is a dimensional embassy, using music as the common language between worlds. Their message appears benevolent: creativity transcends boundaries, collaboration crosses realities, and the question "what if we tried THIS instead?" applies not just to musical choices, but to the very nature of existence itself. This researcher's work is complete. Let the music speak for itself.</p>
         </div>
     </section>
-
     <footer>
-        <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: UNRESTRICTED | Document ID: TME-1310-BIO-AB</p>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: MAXIMUM RESTRICTED | Document ID: TME-1310-BIO-AB-FINAL</p>
+        <p style="margin-top: 5px; font-size: 0.85rem; color: #014208;">⚠ COMPLETE INTERDIMENSIONAL COLLECTIVE CONFIRMED ⚠</p>
+        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">CASE STATUS: PHENOMENON VALIDATED - ARCHIVE COMPLETE</p>
     </footer>
 </body>
 </html>
