@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos | The Murphy Experiment</title>
+    <title>Visual Evidence Archive | The Murphy Experiment</title>
     <style>
         * {
             margin: 0;
@@ -35,6 +35,19 @@
             padding: 40px 20px;
             text-align: center;
             background: radial-gradient(circle at center, rgba(212, 197, 160, 0.6) 0%, rgba(212, 197, 160, 0.3) 70%);
+        }
+
+        .archive-label {
+            font-size: 0.9rem;
+            color: #8b0000;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid #8b0000;
+            padding: 8px 20px;
+            background: rgba(139, 0, 0, 0.1);
+            display: inline-block;
         }
 
         .logo {
@@ -84,6 +97,31 @@
             font-weight: bold;
         }
 
+        .section-label {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8b0000;
+            letter-spacing: 0.15em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .artifact-note {
+            color: #1a1a1a;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-style: italic;
+            padding: 20px;
+            background: rgba(139, 90, 43, 0.15);
+            border-left: 4px solid #8b0000;
+            border-radius: 5px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .videos-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -124,6 +162,15 @@
             font-weight: bold;
         }
 
+        .video-code {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #8b0000;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -150,15 +197,21 @@
 </head>
 <body>
     <header>
+        <div class="archive-label">RECOVERED VISUAL DOCUMENTATION</div>
         <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Videos</p>
-        <a href="index.html" class="back-link">← Back to Main Page</a>
+        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Video Evidence Analysis</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
     </header>
 
     <section id="videos">
-        <h2>Music Videos</h2>
+        <div class="section-label">CASE #1310 - VISUAL EVIDENCE CATALOG</div>
+        <h2>Recovered Footage Archive</h2>
+        <div class="artifact-note">
+            <strong>Archivist's Assessment:</strong> Five discrete video artifacts recovered from historical data repositories (platform designation: "Vimeo"). Each artifact provides crucial visual documentation of subject group's creative output during the 2020-2024 CE period. Analysis reveals consistent aesthetic choices: outdoor terrestrial locations, performance-based documentation, and narrative elements ranging from investigative (Evidence Item VID-001) to geographical commentary (VID-002) to bovine advocacy (VID-005). Quality: High-definition. Authentication status: Verified. Dimensional anomalies detected: Under investigation.
+        </div>
         <div class="videos-grid">
             <div class="video-container">
+                <div class="video-code">EVIDENCE ITEM: VID-001</div>
                 <div class="video-title">The Search, What's in the Box?</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126403069?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="The Search, What's in the Box?"></iframe>
@@ -166,6 +219,7 @@
             </div>
 
             <div class="video-container">
+                <div class="video-code">EVIDENCE ITEM: VID-002</div>
                 <div class="video-title">Too Far North (To Get a Tan)</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126666770?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Too Far North (To Get a Tan)"></iframe>
@@ -173,6 +227,7 @@
             </div>
 
             <div class="video-container">
+                <div class="video-code">EVIDENCE ITEM: VID-003</div>
                 <div class="video-title">Making Sense</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126683545?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Making Sense"></iframe>
@@ -180,6 +235,7 @@
             </div>
 
             <div class="video-container">
+                <div class="video-code">EVIDENCE ITEM: VID-004</div>
                 <div class="video-title">Thursdays</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126706301?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Thursdays"></iframe>
@@ -187,6 +243,7 @@
             </div>
 
             <div class="video-container">
+                <div class="video-code">EVIDENCE ITEM: VID-005</div>
                 <div class="video-title">Cow Theme Parks</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/940311827?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Cow Theme Parks"></iframe>
@@ -196,8 +253,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 The Murphy Experiment | Tempe, Arizona • Bangor, Northern Ireland</p>
+        <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: UNRESTRICTED | Document ID: TME-1310-VIDEO</p>
     </footer>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
