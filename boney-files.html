@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boney Files | The Murphy Experiment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #d4c5a0 url('background-texture.jpg') center/cover fixed;
+            color: #2a2a2a;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(212, 197, 160, 0.6) 0%, rgba(212, 197, 160, 0.3) 70%);
+        }
+
+        .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3d2813;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #654321, #4a3319);
+            color: #f5e6d3;
+            padding: 12px 30px;
+            border: 2px solid #8b5a2b;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4);
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(101, 67, 33, 0.6);
+            background: linear-gradient(135deg, #8b5a2b, #654321);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #654321, #4a3319);
+            color: #f5e6d3;
+            padding: 15px 40px;
+            border: 2px solid #8b5a2b;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(101, 67, 33, 0.6);
+            background: linear-gradient(135deg, #8b5a2b, #654321);
+        }
+
+        section {
+            position: relative;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #3d2813;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+        }
+
+        .album-section {
+            background: rgba(245, 230, 211, 0.95);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(101, 67, 33, 0.6);
+        }
+
+        .album-title {
+            font-size: 3rem;
+            color: #3d2813;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+        }
+
+        .album-subtitle {
+            font-size: 1.3rem;
+            color: #5a3a1a;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .album-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .detail-card {
+            background: rgba(212, 197, 160, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid rgba(101, 67, 33, 0.5);
+            transition: all 0.3s;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(101, 67, 33, 0.8);
+            box-shadow: 0 10px 30px rgba(101, 67, 33, 0.3);
+        }
+
+        .detail-card h3 {
+            color: #3d2813;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .detail-card p {
+            color: #2a2a2a;
+            line-height: 1.6;
+        }
+
+        .tracklist {
+            background: rgba(245, 230, 211, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid rgba(101, 67, 33, 0.6);
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .track {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid rgba(101, 67, 33, 0.3);
+            transition: all 0.3s;
+        }
+
+        .track:last-child {
+            border-bottom: none;
+        }
+
+        .track:hover {
+            background: rgba(212, 197, 160, 0.5);
+            padding-left: 25px;
+        }
+
+        .track-number {
+            font-weight: bold;
+            color: #5a3a1a;
+            min-width: 40px;
+        }
+
+        .track-title {
+            flex: 1;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        .track-duration {
+            color: #5a3a1a;
+            font-weight: bold;
+        }
+
+        .about-content {
+            background: rgba(245, 230, 211, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid rgba(101, 67, 33, 0.6);
+            backdrop-filter: blur(10px);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #3d2813;
+            border-top: 2px solid rgba(101, 67, 33, 0.6);
+            margin-top: 80px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .album-title {
+                font-size: 2rem;
+            }
+
+            .track {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
+        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">The Boney Files</p>
+        <a href="index.html" class="back-link">← Back to Main Page</a>
+    </header>
+
+    <section id="album">
+        <div class="album-section">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 30px;">
+                <img src="boney-files-cover.jpg" alt="The Boney Files Album Cover" style="max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
+                <div style="text-align: center;">
+                    <div class="album-title">The Boney Files</div>
+                    <div class="album-subtitle">"Musical missives from the kitchen of available time"</div>
+                </div>
+            </div>
+            <p style="color: #1a1a1a; font-size: 1.1rem; line-height: 1.8;">
+                The band's debut album - a collection spanning years of creative evolution. This 10-track journey represents everything they are: progressive passages, experimental chaos, and yes, bovine defense anthems. Every listen reveals new layers, hidden jokes, and musical Easter eggs buried throughout for the dedicated listener.
+            </p>
+            <div class="album-details">
+                <div class="detail-card">
+                    <h3>10 Tracks</h3>
+                    <p>A complete sonic journey from start to finish</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Released April 2024</h3>
+                    <p>Years in the making, crafted in available time</p>
+                </div>
+                <div class="detail-card">
+                    <h3>44 Minutes</h3>
+                    <p>Progressive rock with humor, heart, and a healthy dose of weird</p>
+                </div>
+            </div>
+            <br><br>
+            <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Stream The Boney Files</a>
+        </div>
+
+        <div class="tracklist">
+            <h3 style="color: #3d2813; text-align: center; margin-bottom: 20px; font-size: 1.8rem;">Track Listing</h3>
+            <div class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">The Search, What's in the Box?</span>
+                <span class="track-duration">1:08</span>
+            </div>
+            <div class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">Too Far North (To Get a Tan)</span>
+                <span class="track-duration">5:12</span>
+            </div>
+            <div class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Making Sense</span>
+                <span class="track-duration">3:00</span>
+            </div>
+            <div class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Thursdays</span>
+                <span class="track-duration">4:01</span>
+            </div>
+            <div class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">CFC Free (Cling Film Figurines) Live at Paddy's</span>
+                <span class="track-duration">4:37</span>
+            </div>
+            <div class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Punch</span>
+                <span class="track-duration">4:12</span>
+            </div>
+            <div class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Idle Bones</span>
+                <span class="track-duration">4:50</span>
+            </div>
+            <div class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Climatize</span>
+                <span class="track-duration">7:31</span>
+            </div>
+            <div class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">Rock Paper Scissors</span>
+                <span class="track-duration">3:36</span>
+            </div>
+            <div class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Cow Theme Parks</span>
+                <span class="track-duration">6:12</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="videos.html" class="cta-button">Watch Music Videos</a>
+        </div>
+    </section>
+
+    <section id="credits">
+        <h2>Album Credits</h2>
+        <div class="about-content">
+            <p><strong>The Murphy Experiment:</strong></p>
+            <p>Stephen A. Murphy - Guitars, Keys, Bass, Vocals</p>
+            <p>John Caulfield - Guitars, Vocals</p>
+            <p>Gary Bloxsom - Drums, Percussion, Backing Vocals</p>
+            <p>Angela Brown - Vocals</p>
+            <br>
+            <p><strong>Guest Musicians:</strong></p>
+            <p>Roy Nelson - Harmonica (Too Far North)</p>
+            <p>Eden Meshida - Bass (CFC Free)</p>
+            <p>Karen Shafer - Doors (The Search, What's in the Box?)</p>
+            <p>Suki - Barks (The Search, What's in the Box?)</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The Murphy Experiment | Tempe, Arizona • Bangor, Northern Ireland</p>
+        <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
+    </footer>
+</body>
+</html>
