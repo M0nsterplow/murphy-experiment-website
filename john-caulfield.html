@@ -11,8 +11,12 @@
         header { position: relative; padding: 40px 20px; text-align: center; background: radial-gradient(circle at center, rgba(212, 197, 160, 0.6) 0%, rgba(212, 197, 160, 0.3) 70%); }
         .archive-label { font-size: 0.9rem; color: #8b0000; letter-spacing: 0.2em; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; border: 2px solid #8b0000; padding: 8px 20px; background: rgba(139, 0, 0, 0.1); display: inline-block; }
         .logo { font-family: 'Courier New', monospace; font-size: 3rem; font-weight: bold; color: #014208; margin-bottom: 10px; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); letter-spacing: 0.05em; }
-        .back-link { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #654321, #4a3319); color: #f5e6d3; padding: 12px 30px; border: 2px solid #8b5a2b; border-radius: 50px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4); }
+        .back-link { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #654321, #4a3319); color: #f5e6d3; padding: 12px 30px; border: 2px solid #8b5a2b; border-radius: 50px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4); margin: 0 10px; }
         .back-link:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(101, 67, 33, 0.6); background: linear-gradient(135deg, #8b5a2b, #654321); }
+        .next-link { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #8b0000, #5a0000); color: #f5e6d3; padding: 12px 30px; border: 2px solid #8b0000; border-radius: 50px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(139, 0, 0, 0.4); margin: 0 10px; }
+        .next-link:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(139, 0, 0, 0.6); background: linear-gradient(135deg, #a00000, #8b0000); }
+        .prev-link { display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #5a3a1a, #3d2813); color: #f5e6d3; padding: 12px 30px; border: 2px solid #5a3a1a; border-radius: 50px; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(90, 58, 26, 0.4); margin: 0 10px; }
+        .prev-link:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(90, 58, 26, 0.6); background: linear-gradient(135deg, #6b4a2a, #5a3a1a); }
         section { position: relative; padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
         h2 { font-size: 2.5rem; color: #3d2813; margin-bottom: 30px; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); font-weight: bold; }
         .section-label { text-align: center; font-size: 0.85rem; color: #8b0000; letter-spacing: 0.15em; margin-bottom: 15px; font-weight: bold; text-transform: uppercase; }
@@ -20,6 +24,7 @@
         .revelation-box { background: rgba(139, 0, 0, 0.15); border: 3px solid #8b0000; padding: 30px; border-radius: 15px; margin: 30px 0; }
         .revelation-box h3 { color: #8b0000; font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
         .character-image { max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); border: 3px solid rgba(139, 0, 0, 0.6); margin: 20px auto; display: block; }
+        .navigation-box { background: rgba(139, 0, 0, 0.1); border: 2px solid #8b0000; padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; }
         footer { text-align: center; padding: 40px 20px; color: #3d2813; border-top: 2px solid rgba(101, 67, 33, 0.6); margin-top: 80px; font-weight: bold; }
         @media (max-width: 768px) { .logo { font-size: 2rem; } h2 { font-size: 2rem; } }
     </style>
@@ -29,10 +34,12 @@
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
         <h1 class="logo">THE MURPHY EXPERIMENT</h1>
         <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
-        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div style="margin-top: 20px;">
+            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        </div>
     </header>
     <section>
-        <div class="section-label">CASE #1310 - SUBJECT DOCUMENTATION</div>
+        <div class="section-label">CASE #1310 - SUBJECT DOCUMENTATION [SUBJECT 3 OF 4]</div>
         <h2>John Caulfield</h2>
         <div class="profile-content">
             <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Lead Guitarist • Vocalist • Contributor</p>
@@ -54,6 +61,15 @@
             <p style="margin-top: 20px;"><strong>Interdimensional Team Composition Theory:</strong> Three confirmed dimensional entities now documented, each bringing complementary skill sets: Murphy (multi-instrumental versatility + leadership), Bloxsom/Glockenheim (temporal precision + structural discipline), Caulfield/Highjinks (technical proficiency + creative chaos). This appears to be deliberate team assembly rather than coincidence. One subject remains unanalyzed.</p>
 
             <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Escalation:</strong> Three of four core subjects confirmed as interdimensional manifestations. Case #1310 no longer classified as "hypothesis" but as "phenomenon." The question is no longer "if" they are dimensional travelers, but "why" and "how." Music as inter-reality protocol: nearly certain. Final subject analysis: critical priority. If Subject Brown also confirms dimensional origin, we will have documented the first known fully-dimensional musical collective in human history. Implications: incalculable.</p>
+
+            <div class="navigation-box">
+                <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000;">INVESTIGATION SEQUENCE</p>
+                <p style="margin-bottom: 20px;">Third dimensional entity confirmed. Pattern undeniable. Final subject analysis critical.</p>
+                <div>
+                    <a href="gary-bloxsom.html" class="prev-link">← Previous: Gary Bloxsom</a>
+                    <a href="angela-brown.html" class="next-link">Final Subject: Angela Brown →</a>
+                </div>
+            </div>
         </div>
     </section>
     <footer>
