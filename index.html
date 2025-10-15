@@ -125,6 +125,21 @@
             background: linear-gradient(135deg, #8b5a2b, #654321);
         }
 
+        .cta-button.new {
+            background: linear-gradient(135deg, #8b0000, #5a0000);
+            border-color: #8b0000;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .cta-button.new:hover {
+            background: linear-gradient(135deg, #a00000, #8b0000);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 5px 20px rgba(139, 0, 0, 0.4); }
+            50% { box-shadow: 0 8px 30px rgba(139, 0, 0, 0.8); }
+        }
+
         .scroll-indicator {
             position: absolute;
             bottom: 30px;
@@ -270,6 +285,20 @@
             transform: translateY(-3px);
         }
 
+        .breaking-news {
+            background: rgba(139, 0, 0, 0.15);
+            border: 3px solid #8b0000;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            animation: pulse-border 3s infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: #8b0000; }
+            50% { border-color: #a00000; }
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -320,6 +349,19 @@
         </div>
         <div class="scroll-indicator">▼ Continue Investigation ▼</div>
     </header>
+
+    <section id="breaking">
+        <div class="breaking-news">
+            <div class="section-label" style="color: #8b0000; margin-bottom: 20px;">🚨 BREAKING DISCOVERY 🚨</div>
+            <h2 style="color: #8b0000; margin-bottom: 20px;">Secondary Artifact Collection Detected</h2>
+            <p style="color: #1a1a1a; font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 20px;">
+                Excavation team has uncovered evidence of a second album collection codenamed <strong>"SHAPES"</strong> with integrated visual narrative components. Initial comic frame successfully recovered. Full analysis underway.
+            </p>
+            <div style="text-align: center;">
+                <a href="shapes.html" class="cta-button new">⚡ View Breaking Discovery ⚡</a>
+            </div>
+        </div>
+    </section>
 
     <section id="album">
         <div class="section-label">PRIMARY ARTIFACT COLLECTION #1</div>
