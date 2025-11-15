@@ -99,6 +99,7 @@ section {
     text-decoration: none;
     transition: all 0.3s;
     box-shadow: 0 5px 20px rgba(101, 67, 33, 0.4);
+    margin: 0 10px;
 }
 
 .back-link:hover {
@@ -138,6 +139,52 @@ section {
     background: linear-gradient(135deg, #a00000, #8b0000);
 }
 
+.conclusion-link {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #014208, #012a05);
+    color: #f5e6d3;
+    padding: 12px 30px;
+    border: 2px solid #014208;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(1, 66, 8, 0.4);
+    margin: 0 10px;
+}
+
+.conclusion-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(1, 66, 8, 0.6);
+    background: linear-gradient(135deg, #016a0a, #014208);
+}
+
+.prev-link,
+.next-link {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #5a3a1a, #3d2813);
+    color: #f5e6d3;
+    padding: 12px 30px;
+    border: 2px solid #5a3a1a;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(90, 58, 26, 0.4);
+    margin: 0 10px;
+}
+
+.prev-link:hover,
+.next-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(90, 58, 26, 0.6);
+    background: linear-gradient(135deg, #6b4a2a, #5a3a1a);
+}
+
 .social-link {
     background: rgba(245, 230, 211, 0.95);
     padding: 20px 30px;
@@ -159,7 +206,8 @@ section {
 }
 
 /* Content Boxes */
-.about-content {
+.about-content,
+.profile-content {
     background: rgba(245, 230, 211, 0.95);
     padding: 40px;
     border-radius: 20px;
@@ -169,6 +217,10 @@ section {
     font-size: 1.1rem;
     color: #1a1a1a;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-content {
+    padding: 60px 40px;
 }
 
 .artifact-note {
@@ -206,6 +258,43 @@ section {
     font-style: italic;
     margin-bottom: 30px;
     font-weight: bold;
+}
+
+/* Bio Pages */
+.revelation-box {
+    background: rgba(139, 0, 0, 0.15);
+    border: 3px solid #8b0000;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.revelation-box h3 {
+    color: #8b0000;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.character-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border: 3px solid rgba(139, 0, 0, 0.6);
+    margin: 20px auto;
+    display: block;
+}
+
+.navigation-box {
+    background: rgba(1, 66, 8, 0.1);
+    border: 2px solid #014208;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+    text-align: center;
 }
 
 /* Member Cards */
@@ -322,7 +411,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .about-content {
+    .about-content,
+    .profile-content {
         padding: 25px;
     }
 }
