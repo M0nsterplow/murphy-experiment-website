@@ -172,6 +172,7 @@
             justify-content: center;
             align-items: center;
             animation: fadeIn 0.3s;
+            padding: 20px;
         }
 
         .lightbox-modal.active {
@@ -185,7 +186,10 @@
 
         .lightbox-content {
             position: relative;
-            max-width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 90vw;
             max-height: 90vh;
             animation: zoomIn 0.3s;
         }
@@ -196,8 +200,11 @@
         }
 
         .lightbox-content img {
-            width: 100%;
+            max-width: 100%;
+            max-height: 90vh;
+            width: auto;
             height: auto;
+            object-fit: contain;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
@@ -239,6 +246,10 @@
             .lightbox-close {
                 top: 10px;
                 right: 10px;
+            }
+
+            .lightbox-modal {
+                padding: 10px;
             }
         }
     </style>
