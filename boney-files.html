@@ -123,6 +123,15 @@
             font-weight: bold;
         }
 
+        /* Album covers container */
+        .album-covers-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
         /* Clickable album cover styles */
         .album-cover-container {
             position: relative;
@@ -157,6 +166,15 @@
 
         .album-cover-container:hover::after {
             opacity: 1;
+        }
+
+        .cover-label {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5a3a1a;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: italic;
         }
 
         /* Lightbox modal styles */
@@ -251,6 +269,11 @@
             .lightbox-modal {
                 padding: 10px;
             }
+
+            .album-covers-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -266,8 +289,19 @@
         <div class="section-label">CASE #1310 - COLLECTION ANALYSIS</div>
         <div class="album-section">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 30px;">
-                <div class="album-cover-container" onclick="openLightbox()">
-                    <img src="media/boney-files-cover.jpg" alt="The Boney Files Album Cover" style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
+                <div class="album-covers-container">
+                    <div>
+                        <div class="album-cover-container" onclick="openLightbox('front')">
+                            <img src="media/boney-files-cover.jpg" alt="The Boney Files Album Cover - Front" style="max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
+                        </div>
+                        <div class="cover-label">Front Cover</div>
+                    </div>
+                    <div>
+                        <div class="album-cover-container" onclick="openLightbox('rear')">
+                            <img src="media/boney-files-rear.png" alt="The Boney Files Album Cover - Rear" style="max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
+                        </div>
+                        <div class="cover-label">Rear Cover</div>
+                    </div>
                 </div>
                 <div style="text-align: center;">
                     <div class="album-title">The Boney Files</div>
@@ -382,7 +416,7 @@
     <div id="albumLightbox" class="lightbox-modal" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <img src="media/boney-files-cover.jpg" alt="The Boney Files Album Cover - Full Size">
+            <img id="lightboxImage" src="" alt="Album Cover - Full Size">
         </div>
     </div>
 
@@ -393,7 +427,15 @@
     </footer>
 
     <script>
-        function openLightbox() {
+        function openLightbox(cover) {
+            const lightboxImage = document.getElementById('lightboxImage');
+            if (cover === 'front') {
+                lightboxImage.src = 'media/boney-files-cover.jpg';
+                lightboxImage.alt = 'The Boney Files Album Cover - Front (Full Size)';
+            } else if (cover === 'rear') {
+                lightboxImage.src = 'media/boney-files-rear.png';
+                lightboxImage.alt = 'The Boney Files Album Cover - Rear (Full Size)';
+            }
             document.getElementById('albumLightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
