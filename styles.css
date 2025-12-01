@@ -92,9 +92,10 @@ section {
     margin: 0 auto;
 }
 
-/* Content Column for narrow layout */
+/* Content Column for narrow layout - centered */
 .content-column {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Body text styling */
