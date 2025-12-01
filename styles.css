@@ -1,5 +1,8 @@
 /* The Murphy Experiment - Common Styles */
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,7 +11,7 @@
 }
 
 body {
-    font-family: 'Courier New', monospace;
+    font-family: 'Lora', serif;
     background: #d4c5a0 url('media/background-texture.png') center/cover fixed;
     color: #2a2a2a;
     overflow-x: hidden;
@@ -28,7 +31,7 @@ body::before {
 
 /* Logo and Branding */
 .logo {
-    font-family: 'Courier New', monospace;
+    font-family: 'Special Elite', cursive;
     font-size: 3rem;
     font-weight: bold;
     color: #014208;
@@ -38,6 +41,7 @@ body::before {
 }
 
 .archive-label {
+    font-family: 'Special Elite', cursive;
     font-size: 0.9rem;
     color: #8b0000;
     letter-spacing: 0.2em;
@@ -51,6 +55,7 @@ body::before {
 }
 
 .section-label {
+    font-family: 'Special Elite', cursive;
     text-align: center;
     font-size: 0.85rem;
     color: #8b0000;
@@ -69,6 +74,7 @@ header {
 }
 
 h2 {
+    font-family: 'Special Elite', cursive;
     font-size: 2.5rem;
     color: #3d2813;
     margin-bottom: 30px;
@@ -109,6 +115,7 @@ section {
 }
 
 .cta-button {
+    font-family: 'Special Elite', cursive;
     background: linear-gradient(135deg, #654321, #4a3319);
     color: #f5e6d3;
     padding: 15px 40px;
@@ -186,6 +193,7 @@ section {
 }
 
 .social-link {
+    font-family: 'Special Elite', cursive;
     background: rgba(245, 230, 211, 0.95);
     padding: 20px 30px;
     border-radius: 10px;
@@ -245,6 +253,7 @@ section {
 }
 
 .album-title {
+    font-family: 'Special Elite', cursive;
     font-size: 3rem;
     color: #3d2813;
     margin-bottom: 20px;
@@ -270,6 +279,7 @@ section {
 }
 
 .revelation-box h3 {
+    font-family: 'Special Elite', cursive;
     color: #8b0000;
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -326,6 +336,7 @@ section {
 }
 
 .member-name {
+    font-family: 'Special Elite', cursive;
     font-size: 1.5rem;
     color: #3d2813;
     margin-bottom: 10px;
