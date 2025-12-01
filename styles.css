@@ -1,7 +1,7 @@
 /* The Murphy Experiment - Common Styles */
 
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -55,14 +55,15 @@ body::before {
 }
 
 .section-label {
-    font-family: 'Special Elite', cursive;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #8b0000;
-    letter-spacing: 0.15em;
-    margin-bottom: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #014208;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
     font-weight: bold;
     text-transform: uppercase;
+    opacity: 0.9;
 }
 
 /* Headers */
@@ -75,10 +76,10 @@ header {
 
 h2 {
     font-family: 'Special Elite', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3d2813;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 25px;
+    text-align: left;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     font-weight: bold;
 }
@@ -89,6 +90,33 @@ section {
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Content Column for narrow layout */
+.content-column {
+    max-width: 600px;
+}
+
+/* Body text styling */
+.body-text {
+    font-family: 'Lora', serif;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Data tag footer */
+.data-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: #014208;
+    opacity: 0.7;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(1, 66, 8, 0.2);
+    text-align: left;
 }
 
 /* Buttons and Links */
@@ -232,41 +260,46 @@ section {
 }
 
 .artifact-note {
+    font-family: 'IBM Plex Mono', monospace;
     color: #1a1a1a;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-style: italic;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
     padding: 20px;
-    background: rgba(139, 90, 43, 0.15);
-    border-left: 4px solid #8b0000;
-    border-radius: 5px;
+    background: rgba(1, 66, 8, 0.08);
+    border-left: 3px solid #014208;
+    border-radius: 0 5px 5px 0;
+}
+
+.artifact-note strong {
+    color: #014208;
 }
 
 .album-section {
     background: rgba(245, 230, 211, 0.95);
     padding: 60px 40px;
     border-radius: 20px;
-    text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border: 3px solid rgba(101, 67, 33, 0.6);
 }
 
 .album-title {
     font-family: 'Special Elite', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #3d2813;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     font-weight: bold;
+    text-align: left;
 }
 
 .album-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #5a3a1a;
     font-style: italic;
     margin-bottom: 30px;
     font-weight: bold;
+    text-align: left;
 }
 
 /* Bio Pages */
@@ -411,11 +444,11 @@ footer {
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .album-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .members {
@@ -425,5 +458,9 @@ footer {
     .about-content,
     .profile-content {
         padding: 25px;
+    }
+
+    .content-column {
+        max-width: 100%;
     }
 }
