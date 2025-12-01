@@ -21,9 +21,23 @@
         }
 
         .logo {
-            font-size: 4rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            animation: pulse 2s infinite;
+            color: #8b0000;
+            letter-spacing: 0.1em;
+            transform: rotate(-2.5deg);
+            border: 3px solid #8b0000;
+            outline: 2px solid #8b0000;
+            outline-offset: 4px;
+            padding: 20px 35px;
+            opacity: 0.8;
+            filter: url(#stamp-rough);
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .logo-line {
+            display: block;
         }
 
         .tagline {
@@ -68,17 +82,29 @@
 
         @media (max-width: 768px) {
             .logo {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                padding: 15px 25px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
     <div class="stars" id="stars"></div>
 
     <header>
         <div class="archive-label">CLASSIFIED - ARCHAEOLOGICAL RESEARCH ARCHIVE</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
+        <h1 class="logo">
+            <span class="logo-line">THE MURPHY</span>
+            <span class="logo-line">EXPERIMENT</span>
+        </h1>
         <div class="case-number">CASE #1310</div>
         <div class="tagline">Subject Classification: Interdimensional Musical Phenomenon</div>
         <div class="genre">- Genre Fluid Rock -</div>
