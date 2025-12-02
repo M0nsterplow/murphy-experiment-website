@@ -73,7 +73,7 @@ body::before {
     font-size: 1.8rem;
     font-style: italic;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 55px;
     margin-bottom: 0;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     letter-spacing: 0.05em;
@@ -630,6 +630,7 @@ footer {
 
     .page-subtitle {
         font-size: 1.3rem;
+        margin-top: 40px;
     }
 
     h2 {
