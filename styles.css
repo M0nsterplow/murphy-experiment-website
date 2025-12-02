@@ -133,15 +133,21 @@ section {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #8a6d3b, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5), -1px -1px 0 rgba(0,0,0,0.1);
     margin: 10px;
 }
 
 .back-link:hover {
     background: linear-gradient(180deg, #c4a886 0%, #a88850 100%);
-    transform: translateX(5px);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8a6d3b, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.back-link:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #8a6d3b, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .cta-button {
@@ -156,26 +162,40 @@ section {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #8a6d3b, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5), -1px -1px 0 rgba(0,0,0,0.1);
     margin: 5px;
 }
 
 .cta-button:hover {
     background: linear-gradient(180deg, #c4a886 0%, #a88850 100%);
-    transform: translateX(5px);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8a6d3b, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.cta-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #8a6d3b, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .cta-button.new {
     background: linear-gradient(180deg, #d4a0a0 0%, #b86060 100%);
     color: #5a0000;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.3), -1px -1px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 4px 0 #8b3a3a, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     animation: pulse-glow-folder 2s infinite;
 }
 
 .cta-button.new:hover {
     background: linear-gradient(180deg, #c49090 0%, #a85050 100%);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8b3a3a, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.cta-button.new:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #8b3a3a, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .conclusion-link {
@@ -190,15 +210,21 @@ section {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #3a6b3a, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5), -1px -1px 0 rgba(0,0,0,0.1);
     margin: 5px;
 }
 
 .conclusion-link:hover {
     background: linear-gradient(180deg, #90b490 0%, #50885a 100%);
-    transform: translateX(5px);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #3a6b3a, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.conclusion-link:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #3a6b3a, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .prev-link,
@@ -214,8 +240,8 @@ section {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #8a6d3b, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5), -1px -1px 0 rgba(0,0,0,0.1);
     margin: 5px;
 }
@@ -223,7 +249,14 @@ section {
 .prev-link:hover,
 .next-link:hover {
     background: linear-gradient(180deg, #c4a886 0%, #a88850 100%);
-    transform: translateX(5px);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8a6d3b, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.prev-link:active,
+.next-link:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #8a6d3b, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .social-link {
@@ -238,14 +271,20 @@ section {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #8a6d3b, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5), -1px -1px 0 rgba(0,0,0,0.1);
 }
 
 .social-link:hover {
     background: linear-gradient(180deg, #c4a886 0%, #a88850 100%);
-    transform: translateX(5px);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8a6d3b, 0 3px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.social-link:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0 #8a6d3b, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
 /* Content Boxes */
@@ -431,8 +470,8 @@ footer {
 }
 
 @keyframes pulse-glow-folder {
-    0%, 100% { box-shadow: 2px 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4); }
-    50% { box-shadow: 2px 2px 12px rgba(139, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.4); }
+    0%, 100% { box-shadow: 0 4px 0 #8b3a3a, 0 6px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4); }
+    50% { box-shadow: 0 4px 0 #8b3a3a, 0 6px 12px rgba(139, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.4); }
 }
 
 @keyframes pulse-border {
