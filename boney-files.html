@@ -8,6 +8,17 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <style>
         /* Page-specific styles for boney-files.html */
+        header {
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .archive-label {
+            margin-bottom: 30px;
+        }
+
         .album-section {
             background: rgba(245, 230, 211, 0.95);
             padding: 60px 40px;
@@ -278,10 +289,28 @@
     </style>
 </head>
 <body>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
     <header>
         <div class="archive-label">PRIMARY ARTIFACT COLLECTION #1</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Detailed Artifact Analysis</p>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
+        </div>
+        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold; margin-top: 15px;">Detailed Artifact Analysis</p>
         <a href="index.html" class="back-link">← Return to Archive Index</a>
     </header>
 
@@ -423,7 +452,7 @@
     <footer>
         <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: UNRESTRICTED | Document ID: TME-1310-BONEY</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-BONEY | SESSION: ACTIVE</p>
     </footer>
 
     <script>
