@@ -23,96 +23,6 @@
             text-align: center;
         }
 
-        .stamp-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            color: #014208;
-            letter-spacing: 0.1em;
-            transform: rotate(-2.5deg);
-            border: 3px solid #8b0000;
-            outline: 2px solid #8b0000;
-            outline-offset: 4px;
-            padding: 20px 35px;
-            opacity: 0.85;
-            filter: url(#stamp-rough);
-            text-align: center;
-            line-height: 1.3;
-            margin: 0;
-        }
-
-        .logo-line {
-            display: block;
-        }
-
-        .postmark {
-            position: absolute;
-            top: 50%;
-            right: -70px;
-            transform: translateY(-50%) rotate(12deg);
-            width: 160px;
-            height: 160px;
-            border: 3px solid rgba(0, 0, 0, 0.6);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Special Elite', cursive;
-            color: rgba(0, 0, 0, 0.6);
-            filter: url(#stamp-rough);
-            opacity: 0.8;
-            -webkit-mask-image: linear-gradient(
-                135deg,
-                rgba(0,0,0,1) 0%,
-                rgba(0,0,0,0.8) 30%,
-                rgba(0,0,0,0.3) 60%,
-                rgba(0,0,0,0.6) 75%,
-                rgba(0,0,0,0.2) 100%
-            );
-            mask-image: linear-gradient(
-                135deg,
-                rgba(0,0,0,1) 0%,
-                rgba(0,0,0,0.8) 30%,
-                rgba(0,0,0,0.3) 60%,
-                rgba(0,0,0,0.6) 75%,
-                rgba(0,0,0,0.2) 100%
-            );
-        }
-
-        .postmark::before {
-            content: '';
-            position: absolute;
-            top: 8px;
-            left: 8px;
-            right: 8px;
-            bottom: 8px;
-            border: 2px solid rgba(0, 0, 0, 0.6);
-            border-radius: 50%;
-        }
-
-        .postmark-text-top {
-            font-size: 0.6rem;
-            letter-spacing: 0.15em;
-            margin-bottom: 2px;
-        }
-
-        .postmark-date {
-            font-size: 1rem;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-        }
-
-        .postmark-text-bottom {
-            font-size: 0.55rem;
-            letter-spacing: 0.1em;
-            margin-top: 2px;
-        }
-
         /* Wider parchment boxes */
         .about-content {
             max-width: 1000px;
@@ -147,26 +57,6 @@
         }
 
         @media (max-width: 768px) {
-            .logo {
-                font-size: 1.8rem;
-                padding: 15px 25px;
-            }
-
-            .postmark {
-                width: 120px;
-                height: 120px;
-                right: -50px;
-            }
-
-            .postmark-date {
-                font-size: 0.85rem;
-            }
-
-            .postmark-text-top,
-            .postmark-text-bottom {
-                font-size: 0.5rem;
-            }
-
             .about-content h3 {
                 font-size: 1.4rem;
             }
