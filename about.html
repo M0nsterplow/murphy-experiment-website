@@ -30,14 +30,14 @@
         }
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             color: #014208;
             letter-spacing: 0.1em;
             transform: rotate(-2.5deg);
-            border: 3px solid #8b0000;
-            outline: 2px solid #8b0000;
-            outline-offset: 4px;
-            padding: 20px 35px;
+            border: 4px solid #8b0000;
+            outline: 3px solid #8b0000;
+            outline-offset: 5px;
+            padding: 25px 45px;
             opacity: 0.85;
             filter: url(#stamp-rough);
             text-align: center;
@@ -52,11 +52,11 @@
         .postmark {
             position: absolute;
             top: 50%;
-            right: -70px;
+            right: -90px;
             transform: translateY(-50%) rotate(12deg);
-            width: 160px;
-            height: 160px;
-            border: 3px solid rgba(0, 0, 0, 0.6);
+            width: 200px;
+            height: 200px;
+            border: 4px solid rgba(0, 0, 0, 0.6);
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -87,28 +87,28 @@
         .postmark::before {
             content: '';
             position: absolute;
-            top: 8px;
-            left: 8px;
-            right: 8px;
-            bottom: 8px;
-            border: 2px solid rgba(0, 0, 0, 0.6);
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 3px solid rgba(0, 0, 0, 0.6);
             border-radius: 50%;
         }
 
         .postmark-text-top {
-            font-size: 0.6rem;
+            font-size: 0.75rem;
             letter-spacing: 0.15em;
             margin-bottom: 2px;
         }
 
         .postmark-date {
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: bold;
             letter-spacing: 0.1em;
         }
 
         .postmark-text-bottom {
-            font-size: 0.55rem;
+            font-size: 0.7rem;
             letter-spacing: 0.1em;
             margin-top: 2px;
         }
@@ -148,23 +148,30 @@
 
         @media (max-width: 768px) {
             .logo {
-                font-size: 1.8rem;
-                padding: 15px 25px;
+                font-size: 2.2rem;
+                padding: 18px 30px;
+                border-width: 3px;
+                outline-width: 2px;
             }
 
             .postmark {
-                width: 120px;
-                height: 120px;
-                right: -50px;
+                width: 140px;
+                height: 140px;
+                right: -60px;
+                border-width: 3px;
+            }
+
+            .postmark::before {
+                border-width: 2px;
             }
 
             .postmark-date {
-                font-size: 0.85rem;
+                font-size: 1rem;
             }
 
             .postmark-text-top,
             .postmark-text-bottom {
-                font-size: 0.5rem;
+                font-size: 0.55rem;
             }
 
             .about-content h3 {
