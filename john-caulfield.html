@@ -8,53 +8,74 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Subject Dossier - Lead Guitarist</p>
     </header>
-    <section>
-        <div class="section-label">CASE #1310 - SUBJECT DOCUMENTATION [SUBJECT 3 OF 4]</div>
-        <h2>John Caulfield</h2>
+
+    <section class="section-first">
+        <div class="section-label">[SUBJ_003] SUBJECT DOCUMENTATION</div>
         <div class="profile-content">
-            <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Lead Guitarist • Vocalist • Contributor</p>
-            <p style="text-align: center; margin-bottom: 40px; font-style: italic;">Guitars, Vocals</p>
+            <h2 class="text-center">John Caulfield</h2>
+            <p class="text-center mb-20"><strong>Lead Guitarist • Vocalist • Contributor</strong></p>
+            <p class="text-center mb-20" style="font-style: italic;">Guitars, Vocals</p>
             
             <div class="revelation-box">
                 <h3>⚠ CRITICAL DISCOVERY - AUTHENTICATION PENDING ⚠</h3>
                 <p style="font-style: italic; margin-top: 15px;"><strong>PATTERN CONFIRMED:</strong> Third subject analysis complete. Subject "John Caulfield" displays identical dimensional rendering signatures previously identified in Subjects Murphy and Bloxsom. At this juncture, pattern probability approaches certainty. Enhanced imaging protocols reveal subject manifestation corresponds to parallel reality entity designated as:</p>
-                <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">DR. THIERRY HIGHJINKS</p>
+                <p class="text-center" style="font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">DR. THIERRY HIGHJINKS</p>
                 <p style="font-style: italic;">Cross-dimensional analysis indicates: Academic/scientific credentials (doctorate-level), playful or unconventional methodology suggested by surname, creative problem-solving approach. Visual documentation confirms interdimensional origin.</p>
             </div>
 
             <img src="media/dr-thierry-highjinks.jpg" alt="Dr. Thierry Highjinks" class="character-image">
             
-            <p style="margin-top: 30px;"><strong>Nomenclature Analysis:</strong> The surname "Highjinks" provides critical insight into subject's dimensional personality profile. Term denotes playful mischief, creative chaos, unconventional behavior - precisely the characteristics observed in Case #1310's documented musical output. Combined with "Doctor" title, suggests academic rigor applied through unorthodox lens. This paradox (discipline + chaos) mirrors the band's "Genre Fluid Rock" classification.</p>
+            <p class="body-text mt-20"><strong>Nomenclature Analysis:</strong> The surname "Highjinks" provides critical insight into subject's dimensional personality profile. Term denotes playful mischief, creative chaos, unconventional behavior - precisely the characteristics observed in Case #1310's documented musical output. Combined with "Doctor" title, suggests academic rigor applied through unorthodox lens. This paradox (discipline + chaos) mirrors the band's "Genre Fluid Rock" classification.</p>
 
-            <p style="margin-top: 20px;"><strong>Musical Capabilities Assessment:</strong> Subject's guitar work demonstrates technical mastery paired with experimental tendencies. Lead guitar passages across recovered artifacts show conventional training foundation overlaid with dimensional creative flourishes. Vocal contributions suggest comfort with harmonic complexity and willingness to attempt unconventional melodic structures. Classic "Highjinks" behavior pattern: knowing the rules well enough to break them artistically.</p>
+            <p class="body-text"><strong>Musical Capabilities Assessment:</strong> Subject's guitar work demonstrates technical mastery paired with experimental tendencies. Lead guitar passages across recovered artifacts show conventional training foundation overlaid with dimensional creative flourishes. Vocal contributions suggest comfort with harmonic complexity and willingness to attempt unconventional melodic structures. Classic "Highjinks" behavior pattern: knowing the rules well enough to break them artistically.</p>
 
-            <p style="margin-top: 20px;"><strong>Interdimensional Team Composition Theory:</strong> Three confirmed dimensional entities now documented, each bringing complementary skill sets: Murphy (multi-instrumental versatility + leadership), Bloxsom/Glockenheim (temporal precision + structural discipline), Caulfield/Highjinks (technical proficiency + creative chaos). This appears to be deliberate team assembly rather than coincidence. One subject remains unanalyzed.</p>
+            <p class="body-text"><strong>Interdimensional Team Composition Theory:</strong> Three confirmed dimensional entities now documented, each bringing complementary skill sets: Murphy (multi-instrumental versatility + leadership), Bloxsom/Glockenheim (temporal precision + structural discipline), Caulfield/Highjinks (technical proficiency + creative chaos). This appears to be deliberate team assembly rather than coincidence. One subject remains unanalyzed.</p>
 
-            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Escalation:</strong> Three of four core subjects confirmed as interdimensional manifestations. Case #1310 no longer classified as "hypothesis" but as "phenomenon." The question is no longer "if" they are dimensional travelers, but "why" and "how." Music as inter-reality protocol: nearly certain. Final subject analysis: critical priority. If Subject Brown also confirms dimensional origin, we will have documented the first known fully-dimensional musical collective in human history. Implications: incalculable.</p>
+            <p class="body-text" style="font-style: italic; color: #8b0000;"><strong>Researcher's Escalation:</strong> Three of four core subjects confirmed as interdimensional manifestations. Case #1310 no longer classified as "hypothesis" but as "phenomenon." The question is no longer "if" they are dimensional travelers, but "why" and "how." Music as inter-reality protocol: nearly certain. Final subject analysis: critical priority. If Subject Brown also confirms dimensional origin, we will have documented the first known fully-dimensional musical collective in human history. Implications: incalculable.</p>
 
             <div class="navigation-box">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000;">INVESTIGATION SEQUENCE</p>
-                <p style="margin-bottom: 20px;">Third dimensional entity confirmed. Pattern undeniable. Final subject analysis critical.</p>
+                <p class="mb-20">Third dimensional entity confirmed. Pattern undeniable. Final subject analysis critical.</p>
                 <div>
                     <a href="gary-bloxsom.html" class="prev-link">← Previous: Gary Bloxsom</a>
                     <a href="angela-brown.html" class="next-link">Final Subject: Angela Brown →</a>
                 </div>
             </div>
+
+            <div class="data-tag">
+                RECORD_ID: TME-BIO-003 | SUBJECT: CAULFIELD/HIGHJINKS | STATUS: DIMENSIONAL ORIGIN CONFIRMED
+            </div>
         </div>
     </section>
+
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: RESTRICTED | Document ID: TME-1310-BIO-JC-REVISED</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">⚠ INTERDIMENSIONAL EVIDENCE DETECTED ⚠</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-BIO-JC | SESSION: ACTIVE</p>
     </footer>
 </body>
 </html>
