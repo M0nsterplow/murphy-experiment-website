@@ -8,6 +8,21 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <style>
         /* Page-specific styles for videos.html */
+        header {
+            padding: 60px 20px 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .archive-label {
+            margin-bottom: 40px;
+        }
+
+        #videos {
+            padding-top: 20px;
+        }
+
         .artifact-note {
             color: #1a1a1a;
             font-size: 1rem;
@@ -18,16 +33,13 @@
             background: rgba(139, 90, 43, 0.15);
             border-left: 4px solid #8b0000;
             border-radius: 5px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .videos-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 8px;
         }
 
         .video-container {
@@ -145,19 +157,36 @@
     </style>
 </head>
 <body>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
     <header>
         <div class="archive-label">RECOVERED VISUAL DOCUMENTATION</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Video Evidence Analysis</p>
-        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
+        </div>
+        <p class="page-subtitle">Video Evidence Analysis</p>
     </header>
 
     <section id="videos">
-        <div class="section-label">CASE #1310 - VISUAL EVIDENCE CATALOG</div>
-        <h2>Recovered Footage Archive</h2>
+        <div class="section-label">[VID_CATALOG] VISUAL EVIDENCE ARCHIVE</div>
         <div class="artifact-note">
             <strong>Archivist's Assessment:</strong> Ten visual artifacts identified corresponding to Primary Artifact Collection #1 track sequence. Current recovery status: 6 of 10 artifacts successfully restored and authenticated. Remaining 4 items undergoing digital restoration and authentication protocols. Analysis of recovered items reveals consistent aesthetic choices and performance documentation. Items VID-005, VID-007, VID-008, and VID-009 remain in laboratory analysis - corrupted data being reconstructed. Estimated completion: Progressive release schedule. Quality: High-definition. Authentication status: In progress. Dimensional anomalies detected: Under investigation.
         </div>
+        <div class="section-label">[VID_001-010] RECOVERED FOOTAGE</div>
         <div class="videos-grid">
             <!-- VID-001 -->
             <div class="video-container">
@@ -252,10 +281,10 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p style="margin-top: 20px;">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: UNRESTRICTED | Document ID: TME-1310-VIDEO</p>
-        <p style="margin-top: 10px; font-size: 0.85rem; color: #8b0000;">RECOVERY STATUS: 6/10 ARTIFACTS AUTHENTICATED</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-VIDEO | RECOVERY STATUS: 6/10 ARTIFACTS AUTHENTICATED</p>
     </footer>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
