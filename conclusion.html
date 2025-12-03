@@ -6,122 +6,68 @@
     <title>Case Conclusion | The Murphy Experiment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <style>
-        /* Page-specific styles for conclusion.html */
-        .conclusion-content {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #1a1a1a;
-        }
-
-        .final-conclusion {
-            background: rgba(1, 66, 8, 0.15);
-            border: 4px double #014208;
-            padding: 50px;
-            border-radius: 15px;
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .final-conclusion h3 {
-            color: #014208;
-            font-size: 2.2rem;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-        }
-
-        .collective-image {
-            max-width: 800px;
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-            border: 4px solid rgba(1, 66, 8, 0.8);
-            margin: 30px auto;
-            display: block;
-        }
-
-        .subject-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .subject-box {
-            background: rgba(212, 197, 160, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid rgba(101, 67, 33, 0.5);
-        }
-
-        .subject-box h4 {
-            color: #3d2813;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .subject-box p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .final-conclusion h3 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">CASE CONCLUSION - FINAL REPORT</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Case #1310 - Research Summary</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Case #1310 - Research Summary</p>
     </header>
-    <section>
-        <div class="section-label">CASE #1310 - FINAL ANALYSIS & CONCLUSIONS</div>
-        <h2>Investigation Summary</h2>
-        <div class="conclusion-content">
-            <div class="final-conclusion">
-                <h3>🌟 CASE #1310: PHENOMENON CONFIRMED 🌟</h3>
-                <p style="font-weight: bold; font-size: 1.3rem; margin: 25px 0; line-height: 1.8; color: #014208;">ALL FOUR CORE SUBJECTS CONFIRMED AS INTERDIMENSIONAL MANIFESTATIONS</p>
+
+    <section class="section-first">
+        <div class="section-label">[CASE_1310] FINAL ANALYSIS & CONCLUSIONS</div>
+        <div class="content-box large">
+            <h2 class="text-center">Investigation Summary</h2>
+            
+            <div class="urgent-box" style="border-color: #014208; background: rgba(1, 66, 8, 0.15);">
+                <h3 style="color: #014208;">🌟 CASE #1310: PHENOMENON CONFIRMED 🌟</h3>
+                <p class="text-center" style="font-weight: bold; font-size: 1.3rem; margin: 25px 0; line-height: 1.8; color: #014208;">ALL FOUR CORE SUBJECTS CONFIRMED AS INTERDIMENSIONAL MANIFESTATIONS</p>
                 
-                <img src="media/the-murphy-experiment-collage.jpg" alt="The Complete Interdimensional Collective" class="collective-image">
+                <img src="media/the-murphy-experiment-collage.jpg" alt="The Complete Interdimensional Collective" class="banner-image" style="border-color: rgba(1, 66, 8, 0.8);">
                 
-                <p style="margin-top: 25px; line-height: 1.8; font-size: 1.05rem;"><strong>The Murphy Experiment</strong> represents the first fully-documented case of an interdimensional musical collective operating across reality boundaries. Analysis reveals deliberate team composition, each member contributing specialized capabilities from their dimensional origin.</p>
+                <p class="text-center mt-20" style="line-height: 1.8; font-size: 1.05rem;"><strong>The Murphy Experiment</strong> represents the first fully-documented case of an interdimensional musical collective operating across reality boundaries. Analysis reveals deliberate team composition, each member contributing specialized capabilities from their dimensional origin.</p>
             </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 40px 0 25px 0; text-align: center;">Confirmed Interdimensional Subjects</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">Confirmed Interdimensional Subjects</h3>
             
-            <div class="subject-summary">
-                <div class="subject-box">
+            <div class="content-grid cols-4 mt-20">
+                <div class="info-card">
                     <h4>Subject 1: Stephen A. Murphy</h4>
                     <p><strong>Dimensional Identity:</strong> Professor Zachary Zap</p>
                     <p><strong>Role:</strong> Project Architect</p>
                     <p><strong>Capabilities:</strong> Scientific leadership, multi-instrumental versatility, compositional mastery, audio engineering expertise</p>
                 </div>
-                <div class="subject-box">
+                <div class="info-card">
                     <h4>Subject 2: Gary Bloxsom</h4>
                     <p><strong>Dimensional Identity:</strong> Captain Bash Glockenheim</p>
                     <p><strong>Role:</strong> Rhythm Architect</p>
                     <p><strong>Capabilities:</strong> Temporal precision, structural discipline, enhanced chronological sensitivity, percussion mastery</p>
                 </div>
-                <div class="subject-box">
+                <div class="info-card">
                     <h4>Subject 3: John Caulfield</h4>
                     <p><strong>Dimensional Identity:</strong> Dr. Thierry Highjinks</p>
                     <p><strong>Role:</strong> Creative Catalyst</p>
                     <p><strong>Capabilities:</strong> Technical proficiency, creative chaos, experimental innovation, harmonic complexity</p>
                 </div>
-                <div class="subject-box">
+                <div class="info-card">
                     <h4>Subject 4: Angela Brown</h4>
                     <p><strong>Dimensional Identity:</strong> Countess Vanessa Switchbait</p>
                     <p><strong>Role:</strong> Sonic Storyteller</p>
@@ -129,31 +75,31 @@
                 </div>
             </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 50px 0 25px 0; text-align: center;">Key Findings</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">Key Findings</h3>
             
-            <p style="margin-top: 25px;"><strong>Mission Assessment:</strong> Evidence suggests music serves as a universal constant enabling cross-dimensional communication. The collective's "Genre Fluid Rock" classification reflects literal dimensional fluidity - the ability to move between musical styles mirrors movement between realities.</p>
+            <p class="body-text mt-20"><strong>Mission Assessment:</strong> Evidence suggests music serves as a universal constant enabling cross-dimensional communication. The collective's "Genre Fluid Rock" classification reflects literal dimensional fluidity - the ability to move between musical styles mirrors movement between realities.</p>
 
-            <p style="margin-top: 20px;"><strong>Creative Philosophy:</strong> The repeated mantra "Yeah, but what if we tried THIS instead?" appears to be more than artistic approach - it represents active exploration of multiple reality possibilities simultaneously. Each musical decision may reflect choices made across dimensional boundaries.</p>
+            <p class="body-text"><strong>Creative Philosophy:</strong> The repeated mantra "Yeah, but what if we tried THIS instead?" appears to be more than artistic approach - it represents active exploration of multiple reality possibilities simultaneously. Each musical decision may reflect choices made across dimensional boundaries.</p>
 
-            <p style="margin-top: 20px;"><strong>Geographic Coordination:</strong> The successful collaboration across 5,000+ miles (Arizona to Northern Ireland) despite no prior physical meetings suggests enhanced dimensional communication capabilities. Traditional distance appears irrelevant to interdimensional entities.</p>
+            <p class="body-text"><strong>Geographic Coordination:</strong> The successful collaboration across 5,000+ miles (Arizona to Northern Ireland) despite no prior physical meetings suggests enhanced dimensional communication capabilities. Traditional distance appears irrelevant to interdimensional entities.</p>
 
-            <p style="margin-top: 20px;"><strong>Temporal Analysis:</strong> Multi-year production timeline during the early-mid 21st century indicates methodical approach characteristic of scientific experimentation. Each track represents unique sonic experiment, testing boundaries of genre, structure, and audience expectation.</p>
+            <p class="body-text"><strong>Temporal Analysis:</strong> Multi-year production timeline during the early-mid 21st century indicates methodical approach characteristic of scientific experimentation. Each track represents unique sonic experiment, testing boundaries of genre, structure, and audience expectation.</p>
 
-            <p style="margin-top: 20px;"><strong>Thematic Patterns:</strong> Recurring elements throughout "The Boney Files" collection - bovine references, absurdist humor, dimensional metaphors disguised as relationship songs - suggest encoded messaging system for cross-reality communication.</p>
+            <p class="body-text"><strong>Thematic Patterns:</strong> Recurring elements throughout "The Boney Files" collection - bovine references, absurdist humor, dimensional metaphors disguised as relationship songs - suggest encoded messaging system for cross-reality communication.</p>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 50px 0 25px 0; text-align: center;">Official Determination</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">Official Determination</h3>
 
-            <div style="background: rgba(1, 66, 8, 0.1); border: 3px solid #014208; padding: 30px; border-radius: 10px; margin: 30px 0;">
-                <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #014208; text-align: center;">CASE STATUS: CLOSED</p>
-                <p style="text-align: center; margin-bottom: 20px;">Phenomenon Validated - All Evidence Confirms Interdimensional Origin</p>
-                <p style="margin-top: 20px; line-height: 1.8;"><strong>Probability Assessment:</strong> 99.7% certainty that Case #1310 represents genuine interdimensional musical collective. Remaining 0.3% margin accounts for limitations of current dimensional detection technology.</p>
-                <p style="margin-top: 20px; line-height: 1.8;"><strong>Threat Level:</strong> NONE. All evidence suggests benevolent intent. Mission appears focused on demonstrating that creativity transcends boundaries, collaboration crosses realities, and artistic expression serves as common language between worlds.</p>
-                <p style="margin-top: 20px; line-height: 1.8;"><strong>Recommendation:</strong> Continue passive monitoring. Allow collective to proceed with documented mission. Public disclosure: unnecessary and potentially counterproductive. Let the music speak for itself.</p>
+            <div class="navigation-box mt-20">
+                <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #014208;">CASE STATUS: CLOSED</p>
+                <p class="mb-20">Phenomenon Validated - All Evidence Confirms Interdimensional Origin</p>
+                <p class="body-text"><strong>Probability Assessment:</strong> 99.7% certainty that Case #1310 represents genuine interdimensional musical collective. Remaining 0.3% margin accounts for limitations of current dimensional detection technology.</p>
+                <p class="body-text"><strong>Threat Level:</strong> NONE. All evidence suggests benevolent intent. Mission appears focused on demonstrating that creativity transcends boundaries, collaboration crosses realities, and artistic expression serves as common language between worlds.</p>
+                <p class="body-text mb-0"><strong>Recommendation:</strong> Continue passive monitoring. Allow collective to proceed with documented mission. Public disclosure: unnecessary and potentially counterproductive. Let the music speak for itself.</p>
             </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 50px 0 25px 0; text-align: center;">Lead Researcher's Final Statement</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">Lead Researcher's Final Statement</h3>
 
-            <p style="font-style: italic; color: #1a1a1a; margin-top: 25px; padding: 30px; background: rgba(139, 90, 43, 0.1); border-left: 4px solid #8b0000; border-radius: 5px; line-height: 1.8;">
+            <div class="artifact-note urgent mt-20">
                 After months of rigorous analysis, extensive documentation review, and dimensional signature verification, this researcher must acknowledge that truth has emerged stranger than initially hypothesized. The Murphy Experiment is not simply a band - it is a dimensional embassy, using music as the common language between worlds.
                 <br><br>
                 Their message appears fundamentally optimistic: creativity transcends boundaries, collaboration crosses realities, and the question "what if we tried THIS instead?" applies not merely to musical choices, but to the very nature of existence itself. They demonstrate that different approaches, different perspectives, different realities can harmonize into something greater than the sum of their parts.
@@ -165,20 +111,25 @@
                 Case #1310 is closed, but The Murphy Experiment continues. And that, ultimately, is exactly as it should be.
                 <br><br>
                 <strong style="color: #8b0000;">— Lead Researcher, Archaeological Research Archive<br>October 2025 CE</strong>
-            </p>
+            </div>
 
-            <div style="text-align: center; margin-top: 50px; padding: 30px; background: rgba(139, 0, 0, 0.05); border-radius: 10px;">
+            <div class="text-center mt-40" style="padding: 30px; background: rgba(139, 0, 0, 0.05); border-radius: 10px;">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000;">IMPLICATIONS FOR HUMANITY</p>
                 <p style="line-height: 1.8;">If interdimensional musical collectives exist, what else crosses the boundaries between realities? What other collaborations occur beyond our perception? Perhaps creativity itself is the universal constant - the one force that transcends dimensional limitations. Perhaps every act of genuine creation opens doorways we cannot yet detect. Perhaps we are all, unknowingly, participating in exchanges across realities every time we make something new.</p>
-                <p style="margin-top: 20px; font-style: italic;">The Murphy Experiment proves it's possible. Everything else is speculation.</p>
+                <p class="mt-20" style="font-style: italic;">The Murphy Experiment proves it's possible. Everything else is speculation.</p>
+            </div>
+
+            <div class="data-tag">
+                RECORD_ID: TME-CONCLUSION-001 | CASE: #1310 | STATUS: CLOSED - PHENOMENON VALIDATED
             </div>
         </div>
     </section>
+
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #014208;">CASE STATUS: CLOSED - PHENOMENON VALIDATED</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">Document ID: TME-1310-CONCLUSION-FINAL</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-CONCLUSION | SESSION: COMPLETE</p>
     </footer>
 </body>
 </html>
