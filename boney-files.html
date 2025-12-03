@@ -7,140 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <style>
-        /* Page-specific styles for boney-files.html */
-        header {
-            padding: 60px 20px 10px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header .archive-label {
-            margin-bottom: 40px;
-        }
-
-        #album {
-            padding-top: 20px;
-        }
-
-        .album-section {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            border: 3px solid rgba(101, 67, 33, 0.6);
-        }
-
-        .album-title {
-            font-size: 3rem;
-            color: #3d2813;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-            font-weight: bold;
-        }
-
-        .album-subtitle {
-            font-size: 1.3rem;
-            color: #5a3a1a;
-            font-style: italic;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        .artifact-note {
-            color: #1a1a1a;
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            font-style: italic;
-            padding: 20px;
-            background: rgba(139, 90, 43, 0.15);
-            border-left: 4px solid #8b0000;
-            border-radius: 5px;
-            text-align: left;
-        }
-
-        .album-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .detail-card {
-            background: rgba(212, 197, 160, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid rgba(101, 67, 33, 0.5);
-        }
-
-        .detail-card h3 {
-            color: #3d2813;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .detail-card p {
-            color: #2a2a2a;
-            line-height: 1.6;
-        }
-
-        .tracklist {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            margin-top: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .track {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid rgba(101, 67, 33, 0.3);
-            transition: all 0.3s;
-        }
-
-        .track:last-child {
-            border-bottom: none;
-        }
-
-        .track:hover {
-            background: rgba(212, 197, 160, 0.5);
-            padding-left: 25px;
-        }
-
-        .track-number {
-            font-weight: bold;
-            color: #5a3a1a;
-            min-width: 40px;
-        }
-
-        .track-title {
-            flex: 1;
-            color: #1a1a1a;
-            font-weight: bold;
-        }
-
-        .track-duration {
-            color: #5a3a1a;
-            font-weight: bold;
-        }
-
-        #credits .about-content {
-            margin-top: 8px;
-        }
-
-        #credits .about-content h2 {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        /* Album covers container */
+        /* Page-specific: album cover gallery layout */
         .album-covers-container {
             display: flex;
             gap: 20px;
@@ -149,144 +16,7 @@
             margin-bottom: 20px;
         }
 
-        /* Clickable album cover styles */
-        .album-cover-container {
-            position: relative;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .album-cover-container img {
-            transition: all 0.3s;
-        }
-
-        .album-cover-container:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-        }
-
-        .album-cover-container::after {
-            content: '🔍 Click to enlarge';
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-        }
-
-        .album-cover-container:hover::after {
-            opacity: 1;
-        }
-
-        .cover-label {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #5a3a1a;
-            margin-top: 10px;
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        /* Lightbox modal styles */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s;
-            padding: 20px;
-        }
-
-        .lightbox-modal.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .lightbox-content {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 90vw;
-            max-height: 90vh;
-            animation: zoomIn 0.3s;
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.8); }
-            to { transform: scale(1); }
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            background: rgba(139, 0, 0, 0.8);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .lightbox-close:hover {
-            background: rgba(139, 0, 0, 1);
-            transform: rotate(90deg);
-        }
-
         @media (max-width: 768px) {
-            .album-title {
-                font-size: 2rem;
-            }
-
-            .track {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .lightbox-close {
-                top: 10px;
-                right: 10px;
-            }
-
-            .lightbox-modal {
-                padding: 10px;
-            }
-
             .album-covers-container {
                 flex-direction: column;
                 align-items: center;
@@ -303,7 +33,7 @@
         </filter>
     </svg>
 
-    <header>
+    <header class="page-header">
         <div class="archive-label">AUDIO COLLECTION - CASE #1310</div>
         <div class="stamp-container">
             <h1 class="logo">
@@ -319,57 +49,54 @@
         <p class="page-subtitle">Primary Collection - Technical Analysis</p>
     </header>
 
-    <section id="album">
+    <section id="album" class="section-first">
         <div class="section-label">[REC_001] PRIMARY AUDIO COLLECTION</div>
-        <div class="album-section">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 30px;">
-                <div class="album-covers-container">
-                    <div>
-                        <div class="album-cover-container" onclick="openLightbox('front')">
-                            <img src="media/boney-files-cover.jpg" alt="The Boney Files Album Cover - Front" style="max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
-                        </div>
-                        <div class="cover-label">Front Cover</div>
+        <div class="album-section centered">
+            <div class="album-covers-container">
+                <div>
+                    <div class="image-clickable" onclick="openLightbox('front')">
+                        <img src="media/boney-files-cover.jpg" alt="The Boney Files Album Cover - Front" class="bordered-image" style="max-width: 400px; width: 100%;">
                     </div>
-                    <div>
-                        <div class="album-cover-container" onclick="openLightbox('rear')">
-                            <img src="media/boney-files-rear.png" alt="The Boney Files Album Cover - Rear" style="max-width: 400px; width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); border: 3px solid rgba(101, 67, 33, 0.6);">
-                        </div>
-                        <div class="cover-label">Rear Cover</div>
-                    </div>
+                    <div class="image-label">Front Cover</div>
                 </div>
-                <div style="text-align: center;">
-                    <div class="album-title">The Boney Files</div>
-                    <div class="album-subtitle">"Musical missives from the kitchen of available time"</div>
+                <div>
+                    <div class="image-clickable" onclick="openLightbox('rear')">
+                        <img src="media/boney-files-rear.png" alt="The Boney Files Album Cover - Rear" class="bordered-image" style="max-width: 400px; width: 100%;">
+                    </div>
+                    <div class="image-label">Rear Cover</div>
                 </div>
             </div>
-            <div class="artifact-note">
+            <div class="album-title centered">The Boney Files</div>
+            <div class="album-subtitle centered">"Musical missives from the kitchen of available time"</div>
+            <div class="artifact-note urgent">
                 <strong>Technical Assessment:</strong> This collection represents the primary audio output from the subject group's initial creative period. Production methodology indicates a distributed recording approach across multiple geographic locations, with final assembly occurring over an extended timeline. Stylistic analysis suggests influences from progressive rock traditions with notable integration of comedic and absurdist elements. Track sequencing appears intentional - shorter introductory pieces transitioning to extended exploratory compositions. Recommendation: sequential listening approach exploring contextual layers.
             </div>
             <p class="body-text">
                 The collection comprises ten discrete audio artifacts demonstrating varied compositional and genre approaches. Comprehensive analysis reveals progressive rock foundation enhanced with humor integration, experimental structural divergence, and deliberate absurdist elements. Instrumentation is guitar and drum focused with bass and keyboard augmentation. Vocal arrangements range from male and female solo, to multi-part harmonies. Lyrical content addresses themes including geographic displacement, temporal perception, and bovine-related subject matter. Select compositions appear to contain embedded "Easter eggs" - a 21st-century terrestrial practice of concealing secondary content within primary media. Repeated analysis cycles recommended for complete data extraction.
             </p>
-            <div class="album-details">
-                <div class="detail-card">
-                    <h3>10 Tracks</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>10 Tracks</h4>
                     <p>Variable duration from 1:08 to 7:31</p>
                 </div>
-                <div class="detail-card">
-                    <h3>Released October 2025 CE</h3>
+                <div class="info-card">
+                    <h4>Released October 2025 CE</h4>
                     <p>Multi-year compilation period documented</p>
                 </div>
-                <div class="detail-card">
-                    <h3>44 Minutes Total</h3>
+                <div class="info-card">
+                    <h4>44 Minutes Total</h4>
                     <p>Format: Digital distribution via Bandcamp platform</p>
                 </div>
             </div>
-            <br><br>
-            <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Files</a>
-            <a href="videos.html" class="cta-button">View Visual Materials</a>
+            <div class="button-group centered mt-40">
+                <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Files</a>
+                <a href="videos.html" class="cta-button">View Visual Materials</a>
+            </div>
         </div>
 
-        <div class="section-label" style="margin-top: 60px;">[REC_001.1] TRACK LISTING</div>
+        <div class="section-label mt-60">[REC_001.1] TRACK LISTING</div>
         <div class="tracklist">
-            <h3 style="color: #3d2813; text-align: center; margin-bottom: 20px; font-size: 1.8rem;">Audio Index</h3>
+            <h3 class="centered mb-20">Audio Index</h3>
             <div class="track">
                 <span class="track-number">1.</span>
                 <span class="track-title">The Search, What's in the Box?</span>
@@ -442,7 +169,7 @@
             <p>Wreck the Mic Ange - Backing Vocals (Track 10)</p>
             <p>Veggie huggin' Val - Backing Vocals (Track 10)</p>
             <br>
-            <p style="font-style: italic; color: #8b0000;"><strong>Note:</strong> Track 10 credits indicate use of pseudonyms, likely referencing internal group terminology. "Suki" appears to be a domestic canine present during Track 1 recording sessions.</p>
+            <p class="text-italic text-urgent"><strong>Note:</strong> Track 10 credits indicate use of pseudonyms, likely referencing internal group terminology. "Suki" appears to be a domestic canine present during Track 1 recording sessions.</p>
         </div>
     </section>
 
@@ -456,9 +183,9 @@
 
     <footer>
         <a href="index.html" class="back-link">← Return to Archive Index</a>
-        <p style="margin-top: 20px;">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
-        <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-REC001 | SESSION: ACTIVE</p>
+        <p class="mt-20">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <p class="mt-20 text-italic">"Yeah, but what if we tried THIS instead?"</p>
+        <p class="data-tag text-center" style="border-top: none; padding-top: 0;">Document ID: TME-1310-REC001 | SESSION: ACTIVE</p>
     </footer>
 
     <script>
