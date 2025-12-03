@@ -404,8 +404,6 @@ section {
     font-size: 1.1rem;
     color: #1a1a1a;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .profile-content {
@@ -648,7 +646,6 @@ footer {
     .about-content,
     .profile-content {
         padding: 25px;
-        max-width: 100%;
     }
 
     .content-column {
