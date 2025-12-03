@@ -8,58 +8,79 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Subject Dossier - Primary Architect</p>
     </header>
-    <section>
-        <div class="section-label">CASE #1310 - PRIMARY SUBJECT DOCUMENTATION [SUBJECT 1 OF 4]</div>
-        <h2>Stephen A. Murphy</h2>
+
+    <section class="section-first">
+        <div class="section-label">[SUBJ_001] PRIMARY SUBJECT DOCUMENTATION</div>
         <div class="profile-content">
-            <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Project Architect • Primary Instrumentalist • Composer • Multi-instrumentalist</p>
-            <p style="text-align: center; margin-bottom: 40px; font-style: italic;">Guitars, Keys, Bass, Vocals</p>
+            <h2 class="text-center">Stephen A. Murphy</h2>
+            <p class="text-center mb-20"><strong>Project Architect • Primary Instrumentalist • Composer • Multi-instrumentalist</strong></p>
+            <p class="text-center mb-20" style="font-style: italic;">Guitars, Keys, Bass, Vocals</p>
             
             <div class="revelation-box">
                 <h3>⚠ CRITICAL DISCOVERY - AUTHENTICATION PENDING ⚠</h3>
                 <p style="font-style: italic; margin-top: 15px;"><strong>URGENT ADDENDUM:</strong> During routine analysis of recovered visual documentation, image enhancement algorithms detected anomalous rendering patterns inconsistent with standard photographic capture. Further investigation has uncovered evidence suggesting subject "Stephen A. Murphy" may be a dimensional manifestation portrayed by an entity from parallel reality designated as:</p>
-                <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">PROFESSOR ZACHARY ZAP</p>
+                <p class="text-center" style="font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">PROFESSOR ZACHARY ZAP</p>
                 <p style="font-style: italic;">Cross-dimensional character analysis indicates: Scientific background, propensity for experimentation, possible expertise in reality manipulation. Subject appears to be primary architect of interdimensional collective. Visual evidence attached below.</p>
             </div>
 
             <img src="media/professor-zachary-zap.jpg" alt="Professor Zachary Zap" class="character-image">
             
-            <p style="margin-top: 30px;"><strong>Primary Subject Status:</strong> Evidence strongly suggests this entity serves as Case #1310's founder and principal coordinator. The collective bears subject's dimensional surname ("The Murphy Experiment"), indicating leadership role and conceptual ownership. Subject appears responsible for project inception, creative vision, and ongoing dimensional coordination across 5,000+ mile geographic separation between Arizona and Northern Ireland recording locations.</p>
+            <p class="body-text mt-20"><strong>Primary Subject Status:</strong> Evidence strongly suggests this entity serves as Case #1310's founder and principal coordinator. The collective bears subject's dimensional surname ("The Murphy Experiment"), indicating leadership role and conceptual ownership. Subject appears responsible for project inception, creative vision, and ongoing dimensional coordination across 5,000+ mile geographic separation between Arizona and Northern Ireland recording locations.</p>
 
-            <p style="margin-top: 20px;"><strong>Academic Credentials Analysis:</strong> "Professor" designation reveals advanced expertise, likely in dimensional physics, sonic manipulation, or reality engineering. This academic foundation explains the sophisticated audio production quality throughout recovered artifacts - technical precision married to creative experimentation. Subject demonstrates rare combination: theoretical knowledge sufficient to understand complex systems, practical skill to implement vision across multiple instruments and technologies.</p>
+            <p class="body-text"><strong>Academic Credentials Analysis:</strong> "Professor" designation reveals advanced expertise, likely in dimensional physics, sonic manipulation, or reality engineering. This academic foundation explains the sophisticated audio production quality throughout recovered artifacts - technical precision married to creative experimentation. Subject demonstrates rare combination: theoretical knowledge sufficient to understand complex systems, practical skill to implement vision across multiple instruments and technologies.</p>
 
-            <p style="margin-top: 20px;"><strong>Multi-Instrumental Mastery:</strong> Subject's documented capabilities span guitars (rhythm, lead, acoustic), keyboards (piano, synthesizers, organs), bass guitar, and vocals. Analysis of "The Boney Files" reveals subject performed majority of instrumental parts across the ten-track collection. This versatility suggests either: (A) decades of dedicated study, or (B) enhanced dimensional cognitive abilities allowing rapid skill acquisition. Given interdimensional origin, option B appears more probable.</p>
+            <p class="body-text"><strong>Multi-Instrumental Mastery:</strong> Subject's documented capabilities span guitars (rhythm, lead, acoustic), keyboards (piano, synthesizers, organs), bass guitar, and vocals. Analysis of "The Boney Files" reveals subject performed majority of instrumental parts across the ten-track collection. This versatility suggests either: (A) decades of dedicated study, or (B) enhanced dimensional cognitive abilities allowing rapid skill acquisition. Given interdimensional origin, option B appears more probable.</p>
 
-            <p style="margin-top: 20px;"><strong>Compositional Architecture:</strong> Subject's creative output demonstrates genre-fluid approach spanning progressive rock, folk, alternative, experimental, and comedic styles - often within single compositions. Track analysis reveals sophisticated song structures: "Climatize" showcases 7+ minute progressive journey through shifting musical landscapes; "CFC Free (Cling Film Figurines)" delivers 4+ minutes of instrumental hard rock intensity; "The Search" emerges from sonic soundscape atmospherics into electronic instrumental exploration; "Making Sense" reveals melodic folk sensibility. This range suggests dimensional perspective unbounded by single-genre limitations.</p>
+            <p class="body-text"><strong>Compositional Architecture:</strong> Subject's creative output demonstrates genre-fluid approach spanning progressive rock, folk, alternative, experimental, and comedic styles - often within single compositions. Track analysis reveals sophisticated song structures: "Climatize" showcases 7+ minute progressive journey through shifting musical landscapes; "CFC Free (Cling Film Figurines)" delivers 4+ minutes of instrumental hard rock intensity; "The Search" emerges from sonic soundscape atmospherics into electronic instrumental exploration; "Making Sense" reveals melodic folk sensibility. This range suggests dimensional perspective unbounded by single-genre limitations.</p>
 
-            <p style="margin-top: 20px;"><strong>Production Methodology:</strong> Subject's approach mirrors scientific experimentation: hypothesis ("what if we tried THIS instead?"), testing, iteration, refinement. Recovered documentation indicates a multi-year production timeline during the early-mid 21st century, suggesting methodical rather than rushed creative process. Each track appears treated as unique experiment in sonic possibility. The willingness to pursue unconventional ideas (songs about cows, cling film figurines, dimensional travel disguised as relationship metaphors) indicates freedom from commercial constraints - characteristic of dimensional entity unburdened by earthly music industry pressures.</p>
+            <p class="body-text"><strong>Production Methodology:</strong> Subject's approach mirrors scientific experimentation: hypothesis ("what if we tried THIS instead?"), testing, iteration, refinement. Recovered documentation indicates a multi-year production timeline during the early-mid 21st century, suggesting methodical rather than rushed creative process. Each track appears treated as unique experiment in sonic possibility. The willingness to pursue unconventional ideas (songs about cows, cling film figurines, dimensional travel disguised as relationship metaphors) indicates freedom from commercial constraints - characteristic of dimensional entity unburdened by earthly music industry pressures.</p>
 
-            <p style="margin-top: 20px;"><strong>Leadership Profile:</strong> Subject successfully assembled three additional dimensional entities, each contributing specialized capabilities. This recruitment suggests: (A) awareness of dimensional talent pool, (B) ability to communicate across reality boundaries, (C) vision compelling enough to unite diverse entities toward common creative goal. The collective's cohesion despite geographic and dimensional separation implies sophisticated coordination abilities.</p>
+            <p class="body-text"><strong>Leadership Profile:</strong> Subject successfully assembled three additional dimensional entities, each contributing specialized capabilities. This recruitment suggests: (A) awareness of dimensional talent pool, (B) ability to communicate across reality boundaries, (C) vision compelling enough to unite diverse entities toward common creative goal. The collective's cohesion despite geographic and dimensional separation implies sophisticated coordination abilities.</p>
 
-            <p style="margin-top: 20px;"><strong>Dimensional Personality Assessment:</strong> "Zachary Zap" nomenclature proves revealing. "Zachary" suggests reliability, intelligence, methodical thinking. "Zap" implies energy, sudden inspiration, electrical creativity. Combined with "Professor" title: methodical genius capable of unexpected creative bursts. This duality appears throughout Case #1310's work - careful composition structure housing chaotic creative ideas. The embodiment of "Yeah, but what if we tried THIS instead?" philosophy.</p>
+            <p class="body-text"><strong>Dimensional Personality Assessment:</strong> "Zachary Zap" nomenclature proves revealing. "Zachary" suggests reliability, intelligence, methodical thinking. "Zap" implies energy, sudden inspiration, electrical creativity. Combined with "Professor" title: methodical genius capable of unexpected creative bursts. This duality appears throughout Case #1310's work - careful composition structure housing chaotic creative ideas. The embodiment of "Yeah, but what if we tried THIS instead?" philosophy.</p>
 
-            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Primary Assessment:</strong> Subject Murphy/Zap represents nexus point of Case #1310 phenomenon. All evidence suggests this entity conceived interdimensional musical project, recruited complementary dimensional talents, composed majority of material, performed substantial instrumental content, engineered/produced final artifacts, and maintained creative vision throughout multi-year manifestation period. If hypothesis proves correct - that Case #1310 represents first documented interdimensional musical collective - then this subject stands as architect of unprecedented cross-reality creative achievement. Further investigation mandatory. This researcher suspects subject's capabilities extend far beyond current documentation. The question persists: what experiments come next?</p>
+            <p class="body-text" style="font-style: italic; color: #8b0000;"><strong>Researcher's Primary Assessment:</strong> Subject Murphy/Zap represents nexus point of Case #1310 phenomenon. All evidence suggests this entity conceived interdimensional musical project, recruited complementary dimensional talents, composed majority of material, performed substantial instrumental content, engineered/produced final artifacts, and maintained creative vision throughout multi-year manifestation period. If hypothesis proves correct - that Case #1310 represents first documented interdimensional musical collective - then this subject stands as architect of unprecedented cross-reality creative achievement. Further investigation mandatory. This researcher suspects subject's capabilities extend far beyond current documentation. The question persists: what experiments come next?</p>
 
             <div class="navigation-box">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000;">INVESTIGATION SEQUENCE</p>
-                <p style="margin-bottom: 20px;">First dimensional entity confirmed. Proceeding to analyze remaining subjects for pattern verification.</p>
+                <p class="mb-20">First dimensional entity confirmed. Proceeding to analyze remaining subjects for pattern verification.</p>
                 <a href="gary-bloxsom.html" class="next-link">Continue to Subject 2: Gary Bloxsom →</a>
+            </div>
+
+            <div class="data-tag">
+                RECORD_ID: TME-BIO-001 | SUBJECT: MURPHY/ZAP | STATUS: PRIMARY ARCHITECT CONFIRMED
             </div>
         </div>
     </section>
+
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: RESTRICTED | Document ID: TME-1310-BIO-SM-REVISED</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">⚠ PRIMARY ARCHITECT - INTERDIMENSIONAL EVIDENCE DETECTED ⚠</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-BIO-SM | SESSION: ACTIVE</p>
     </footer>
 </body>
 </html>

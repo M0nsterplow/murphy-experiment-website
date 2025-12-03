@@ -8,53 +8,74 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Subject Dossier - Lead Vocalist</p>
     </header>
-    <section>
-        <div class="section-label">CASE #1310 - FINAL SUBJECT DOCUMENTATION [SUBJECT 4 OF 4]</div>
-        <h2>Angela Brown</h2>
+
+    <section class="section-first">
+        <div class="section-label">[SUBJ_004] FINAL SUBJECT DOCUMENTATION</div>
         <div class="profile-content">
-            <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Lead Vocalist • Sonic Storyteller</p>
-            <p style="text-align: center; margin-bottom: 40px; font-style: italic;">Vocals</p>
+            <h2 class="text-center">Angela Brown</h2>
+            <p class="text-center mb-20"><strong>Lead Vocalist • Sonic Storyteller</strong></p>
+            <p class="text-center mb-20" style="font-style: italic;">Vocals</p>
             
             <div class="revelation-box">
                 <h3>⚠ FINAL CONFIRMATION - HYPOTHESIS VALIDATED ⚠</h3>
                 <p style="font-style: italic; margin-top: 15px;"><strong>CASE CLOSURE IMMINENT:</strong> Fourth and final subject analysis complete. As anticipated following pattern established by previous three subjects, "Angela Brown" exhibits identical dimensional rendering characteristics. Final subject confirmation identifies parallel reality entity as:</p>
-                <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">COUNTESS VANESSA SWITCHBAIT</p>
+                <p class="text-center" style="font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">COUNTESS VANESSA SWITCHBAIT</p>
                 <p style="font-style: italic;">Cross-dimensional profile reveals: Noble or aristocratic lineage (Countess title), strategic thinking capabilities suggested by "Switchbait" designation, commanding presence, sophisticated communication skills. Visual evidence provides final proof of Case #1310's interdimensional nature.</p>
             </div>
 
             <img src="media/countess-vanessa-switchbait.jpg" alt="Countess Vanessa Switchbait" class="character-image">
             
-            <p style="margin-top: 30px;"><strong>Title Analysis:</strong> "Countess" designation suggests aristocratic background from dimensional hierarchy, implying natural leadership, refinement, and commanding vocal presence - all characteristics abundantly evident in recovered audio artifacts. Subject demonstrates exceptional ability to shift between delicate emotional nuance and powerful dramatic delivery, befitting noble lineage trained in sophisticated communication arts.</p>
+            <p class="body-text mt-20"><strong>Title Analysis:</strong> "Countess" designation suggests aristocratic background from dimensional hierarchy, implying natural leadership, refinement, and commanding vocal presence - all characteristics abundantly evident in recovered audio artifacts. Subject demonstrates exceptional ability to shift between delicate emotional nuance and powerful dramatic delivery, befitting noble lineage trained in sophisticated communication arts.</p>
 
-            <p style="margin-top: 20px;"><strong>Nomenclature Deep Analysis:</strong> Surname "Switchbait" proves remarkably revealing. Term suggests strategic misdirection, unexpected transitions, ability to shift audience expectations. This precisely describes subject's vocal performances across Case #1310 catalog: gentle verses that explode into powerful choruses, theatrical storytelling that pivots between humor and pathos, capacity to inhabit multiple emotional states within single composition. The "Countess" provides gravitas; the "Switchbait" provides unpredictability. Perfect duality for lead vocalist in genre-fluid collective.</p>
+            <p class="body-text"><strong>Nomenclature Deep Analysis:</strong> Surname "Switchbait" proves remarkably revealing. Term suggests strategic misdirection, unexpected transitions, ability to shift audience expectations. This precisely describes subject's vocal performances across Case #1310 catalog: gentle verses that explode into powerful choruses, theatrical storytelling that pivots between humor and pathos, capacity to inhabit multiple emotional states within single composition. The "Countess" provides gravitas; the "Switchbait" provides unpredictability. Perfect duality for lead vocalist in genre-fluid collective.</p>
 
-            <p style="margin-top: 20px;"><strong>Vocal Frequency Analysis:</strong> Previously documented "heightened sensitivity to dimensional frequencies" now explained through interdimensional origin. Subject's voice serves as primary communication channel for Case #1310's cross-reality messaging. Vocal range spanning multiple octaves may indicate enhanced physiological capabilities characteristic of dimensional entities. Emotional resonance in performances suggests genuine interdimensional empathy - ability to channel feelings across reality boundaries.</p>
+            <p class="body-text"><strong>Vocal Frequency Analysis:</strong> Previously documented "heightened sensitivity to dimensional frequencies" now explained through interdimensional origin. Subject's voice serves as primary communication channel for Case #1310's cross-reality messaging. Vocal range spanning multiple octaves may indicate enhanced physiological capabilities characteristic of dimensional entities. Emotional resonance in performances suggests genuine interdimensional empathy - ability to channel feelings across reality boundaries.</p>
 
-            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Assessment:</strong> Fourth and final subject confirmed as interdimensional manifestation. Pattern completion validates hypothesis. All four core members of Case #1310 collective verified as entities operating across dimensional boundaries. Probability of coincidence: statistically impossible. This represents first fully-documented interdimensional musical collective in recorded history. Comprehensive analysis and final conclusions compiled in separate case summary report.</p>
+            <p class="body-text" style="font-style: italic; color: #8b0000;"><strong>Researcher's Assessment:</strong> Fourth and final subject confirmed as interdimensional manifestation. Pattern completion validates hypothesis. All four core members of Case #1310 collective verified as entities operating across dimensional boundaries. Probability of coincidence: statistically impossible. This represents first fully-documented interdimensional musical collective in recorded history. Comprehensive analysis and final conclusions compiled in separate case summary report.</p>
 
             <div class="navigation-box">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #014208;">INVESTIGATION COMPLETE</p>
-                <p style="margin-bottom: 20px;">All four dimensional entities confirmed. Final subject verified. Proceeding to case conclusion.</p>
+                <p class="mb-20">All four dimensional entities confirmed. Final subject verified. Proceeding to case conclusion.</p>
                 <div>
                     <a href="john-caulfield.html" class="prev-link">← Previous: John Caulfield</a>
                     <a href="conclusion.html" class="conclusion-link">View Final Case Analysis →</a>
                 </div>
             </div>
+
+            <div class="data-tag">
+                RECORD_ID: TME-BIO-004 | SUBJECT: BROWN/SWITCHBAIT | STATUS: DIMENSIONAL ORIGIN CONFIRMED
+            </div>
         </div>
     </section>
+
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: RESTRICTED | Document ID: TME-1310-BIO-AB-REVISED</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">⚠ INTERDIMENSIONAL EVIDENCE DETECTED ⚠</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-BIO-AB | SESSION: ACTIVE</p>
     </footer>
 </body>
 </html>

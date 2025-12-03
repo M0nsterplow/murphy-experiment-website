@@ -6,90 +6,40 @@
     <title>New Discovery: Shapes | The Murphy Experiment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <style>
-        /* Page-specific styles for shapes.html */
-        .discovery-content {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #1a1a1a;
-        }
-
-        .urgent-box {
-            background: rgba(139, 0, 0, 0.2);
-            border: 4px double #8b0000;
-            padding: 40px;
-            border-radius: 15px;
-            margin: 30px 0;
-            animation: pulse-border 2s infinite;
-        }
-
-        @keyframes pulse-border {
-            0%, 100% { border-color: #8b0000; }
-            50% { border-color: #a00000; }
-        }
-
-        .urgent-box h3 {
-            color: #8b0000;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            text-align: center;
-        }
-
-        .banner-image {
-            max-width: 100%;
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-            border: 4px solid rgba(139, 0, 0, 0.8);
-            margin: 30px 0;
-            display: block;
-        }
-
-        .comic-frame {
-            max-width: 800px;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            margin: 30px auto;
-            display: block;
-        }
-
-        .evidence-note {
-            background: rgba(1, 66, 8, 0.1);
-            border-left: 5px solid #014208;
-            padding: 25px;
-            border-radius: 5px;
-            margin: 30px 0;
-            font-style: italic;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">⚠ BREAKING DISCOVERY - EXCAVATION IN PROGRESS ⚠</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #8b0000; font-size: 1.2rem; font-style: italic; font-weight: bold;">URGENT: New Artifact Collection Detected</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Secondary Artifact Discovery</p>
     </header>
 
-    <section>
-        <div class="section-label">CASE #1310 - SECONDARY ARTIFACT DISCOVERY</div>
-        <h2>Breaking: Collection #2 Uncovered</h2>
-        <div class="discovery-content">
+    <section class="section-first">
+        <div class="section-label">[REC_002] SECONDARY ARTIFACT COLLECTION</div>
+        <div class="content-box large">
+            <h2 class="text-center">Breaking: Collection #2 Uncovered</h2>
             
             <div class="urgent-box">
                 <h3>🚨 URGENT FIELD REPORT 🚨</h3>
-                <p style="text-align: center; font-weight: bold; font-size: 1.2rem; line-height: 1.8; color: #1a1a1a;">
+                <p class="text-center" style="font-weight: bold; font-size: 1.2rem; line-height: 1.8; color: #1a1a1a;">
                     SECONDARY ARTIFACT COLLECTION LOCATED<br>
                     PRELIMINARY ANALYSIS UNDERWAY<br>
                     STANDBY FOR FULL EXCAVATION
@@ -98,61 +48,63 @@
 
             <img src="media/shapes-coming-soon-banner.jpg" alt="Shapes - Coming Soon" class="banner-image">
 
-            <p style="margin-top: 30px; font-weight: bold; color: #8b0000; font-size: 1.2rem;">Date of Discovery: October 2025 CE</p>
+            <p class="body-text mt-20" style="font-weight: bold; color: #8b0000; font-size: 1.2rem;">Date of Discovery: October 2025 CE</p>
             
-            <p style="margin-top: 20px;"><strong>Field Researcher's Initial Report:</strong> During routine excavation work adjacent to the primary "Boney Files" collection site, ground-penetrating equipment detected anomalous readings indicating the presence of additional artifacts. Initial surface scans have revealed what appears to be a second complete audio collection, designated preliminary codename: <strong>"SHAPES"</strong>.</p>
+            <p class="body-text"><strong>Field Researcher's Initial Report:</strong> During routine excavation work adjacent to the primary "Boney Files" collection site, ground-penetrating equipment detected anomalous readings indicating the presence of additional artifacts. Initial surface scans have revealed what appears to be a second complete audio collection, designated preliminary codename: <strong>"SHAPES"</strong>.</p>
 
-            <p style="margin-top: 20px;"><strong>Current Status:</strong> Archaeological team has established perimeter around discovery site. Careful excavation procedures are underway to prevent damage to potentially fragile materials. Early visual documentation suggests this collection may be even more elaborate than the primary artifacts, with evidence of accompanying visual narrative components.</p>
+            <p class="body-text"><strong>Current Status:</strong> Archaeological team has established perimeter around discovery site. Careful excavation procedures are underway to prevent damage to potentially fragile materials. Early visual documentation suggests this collection may be even more elaborate than the primary artifacts, with evidence of accompanying visual narrative components.</p>
 
             <div class="evidence-note">
-                <p style="font-weight: bold; color: #014208; margin-bottom: 15px;">CRITICAL FINDING - VISUAL NARRATIVE COMPONENT DETECTED</p>
+                <p style="font-weight: bold; color: #014208; margin-bottom: 15px; font-style: normal;">CRITICAL FINDING - VISUAL NARRATIVE COMPONENT DETECTED</p>
                 <p>Most intriguing development: Recovery team has successfully extracted what appears to be the first frame of a sequential visual narrative - possibly a "comic book" format as documented in early 21st century media studies. This suggests the interdimensional collective may be expanding their communication methodology beyond pure audio transmission.</p>
             </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 40px 0 20px 0;">First Recovered Visual Evidence</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">First Recovered Visual Evidence</h3>
             
             <img src="media/shapes-comic-frame-01.jpg" alt="First Comic Frame - Shapes" class="comic-frame">
 
-            <p style="margin-top: 30px; font-style: italic; background: rgba(139, 90, 43, 0.1); padding: 20px; border-radius: 5px;"><strong>Image Analysis:</strong> The recovered visual frame appears to depict entities connected to Case #1310 in what researchers are calling "the beginning of their adventures." Initial examination shows at least one figure consistent with documented subject profiles, alongside what may be an assistant or companion entity. The artistic style is consistent with terrestrial comic book traditions, yet the imagery suggests narrative elements that may transcend conventional storytelling limitations. Further frames are currently being carefully excavated from the site to clarify the full cast of characters involved.</p>
+            <div class="artifact-note urgent mt-20">
+                <strong>Image Analysis:</strong> The recovered visual frame appears to depict entities connected to Case #1310 in what researchers are calling "the beginning of their adventures." Initial examination shows at least one figure consistent with documented subject profiles, alongside what may be an assistant or companion entity. The artistic style is consistent with terrestrial comic book traditions, yet the imagery suggests narrative elements that may transcend conventional storytelling limitations. Further frames are currently being carefully excavated from the site to clarify the full cast of characters involved.
+            </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 40px 0 20px 0;">Preliminary Assessment</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">Preliminary Assessment</h3>
 
-            <p style="margin-top: 20px;"><strong>Collection Codename:</strong> SHAPES - Significance of this designation currently under analysis. Preliminary theories suggest reference to: (A) geometric exploration of dimensional boundaries, (B) shapeshifting capabilities of interdimensional entities, or (C) artistic/musical forms and structures.</p>
+            <p class="body-text mt-20"><strong>Collection Codename:</strong> SHAPES - Significance of this designation currently under analysis. Preliminary theories suggest reference to: (A) geometric exploration of dimensional boundaries, (B) shapeshifting capabilities of interdimensional entities, or (C) artistic/musical forms and structures.</p>
 
-            <p style="margin-top: 20px;"><strong>Format Expansion:</strong> Unlike the audio-only "Boney Files" collection, "Shapes" appears to integrate both sonic and visual storytelling components. This represents a significant evolution in the collective's communication strategy - potentially indicating increased confidence in cross-dimensional messaging or response to audience feedback from initial collection release.</p>
+            <p class="body-text"><strong>Format Expansion:</strong> Unlike the audio-only "Boney Files" collection, "Shapes" appears to integrate both sonic and visual storytelling components. This represents a significant evolution in the collective's communication strategy - potentially indicating increased confidence in cross-dimensional messaging or response to audience feedback from initial collection release.</p>
 
-            <p style="margin-top: 20px;"><strong>Production Timeline:</strong> Dating analysis suggests this collection was created in parallel with or immediately following the "Boney Files" compilation. Carbon dating and temporal signature analysis are ongoing to establish precise chronology.</p>
+            <p class="body-text"><strong>Production Timeline:</strong> Dating analysis suggests this collection was created in parallel with or immediately following the "Boney Files" compilation. Carbon dating and temporal signature analysis are ongoing to establish precise chronology.</p>
 
-            <p style="margin-top: 20px;"><strong>Thematic Indicators:</strong> Early evidence suggests "Shapes" may represent more structured narrative approach compared to the experimental nature of "Boney Files." The sequential visual components imply deliberate story arc - possibly chronicling the collective's interdimensional journeys in more explicit detail.</p>
+            <p class="body-text"><strong>Thematic Indicators:</strong> Early evidence suggests "Shapes" may represent more structured narrative approach compared to the experimental nature of "Boney Files." The sequential visual components imply deliberate story arc - possibly chronicling the collective's interdimensional journeys in more explicit detail.</p>
 
-            <div style="background: rgba(139, 0, 0, 0.15); border: 3px solid #8b0000; padding: 30px; border-radius: 10px; margin: 40px 0;">
+            <div class="revelation-box mt-40">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000; text-align: center;">EXCAVATION STATUS</p>
-                <p style="text-align: center; line-height: 1.8;">Full artifact recovery and analysis currently underway. Conservation team working to preserve all materials in original condition. Complete documentation, track listings, and comprehensive analysis will be released upon excavation completion.</p>
-                <p style="margin-top: 20px; text-align: center; font-style: italic; font-weight: bold;">Expected Full Disclosure: 2026 CE</p>
+                <p class="text-center" style="line-height: 1.8;">Full artifact recovery and analysis currently underway. Conservation team working to preserve all materials in original condition. Complete documentation, track listings, and comprehensive analysis will be released upon excavation completion.</p>
+                <p class="text-center mt-20" style="font-style: italic; font-weight: bold;">Expected Full Disclosure: 2026 CE</p>
             </div>
 
-            <h3 style="color: #3d2813; font-size: 1.8rem; margin: 40px 0 20px 0;">What We Know So Far</h3>
+            <h3 class="text-center mt-40" style="color: #3d2813; font-size: 1.8rem;">What We Know So Far</h3>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
-                <div style="background: rgba(212, 197, 160, 0.8); padding: 25px; border-radius: 10px; border: 2px solid rgba(101, 67, 33, 0.5);">
-                    <h4 style="color: #3d2813; margin-bottom: 10px; font-size: 1.2rem;">✓ Audio Collection</h4>
-                    <p style="font-size: 0.95rem; line-height: 1.6;">Complete album of new sonic artifacts detected</p>
+            <div class="content-grid cols-4 mt-20">
+                <div class="info-card">
+                    <h4>✓ Audio Collection</h4>
+                    <p>Complete album of new sonic artifacts detected</p>
                 </div>
-                <div style="background: rgba(212, 197, 160, 0.8); padding: 25px; border-radius: 10px; border: 2px solid rgba(101, 67, 33, 0.5);">
-                    <h4 style="color: #3d2813; margin-bottom: 10px; font-size: 1.2rem;">✓ Visual Narrative</h4>
-                    <p style="font-size: 0.95rem; line-height: 1.6;">Sequential comic-style storytelling component confirmed</p>
+                <div class="info-card">
+                    <h4>✓ Visual Narrative</h4>
+                    <p>Sequential comic-style storytelling component confirmed</p>
                 </div>
-                <div style="background: rgba(212, 197, 160, 0.8); padding: 25px; border-radius: 10px; border: 2px solid rgba(101, 67, 33, 0.5);">
-                    <h4 style="color: #3d2813; margin-bottom: 10px; font-size: 1.2rem;">✓ Same Collective</h4>
-                    <p style="font-size: 0.95rem; line-height: 1.6;">Entities from Case #1310 confirmed in recovered materials</p>
+                <div class="info-card">
+                    <h4>✓ Same Collective</h4>
+                    <p>Entities from Case #1310 confirmed in recovered materials</p>
                 </div>
-                <div style="background: rgba(212, 197, 160, 0.8); padding: 25px; border-radius: 10px; border: 2px solid rgba(101, 67, 33, 0.5);">
-                    <h4 style="color: #3d2813; margin-bottom: 10px; font-size: 1.2rem;">⏳ In Progress</h4>
-                    <p style="font-size: 0.95rem; line-height: 1.6;">Full excavation and documentation underway</p>
+                <div class="info-card">
+                    <h4>⏳ In Progress</h4>
+                    <p>Full excavation and documentation underway</p>
                 </div>
             </div>
 
-            <p style="margin-top: 40px; font-style: italic; color: #8b0000; padding: 30px; background: rgba(139, 90, 43, 0.15); border-left: 4px solid #8b0000; border-radius: 5px;">
+            <div class="artifact-note urgent mt-40">
                 <strong>Lead Researcher's Note:</strong> The discovery of a secondary artifact collection so soon after documenting the "Boney Files" raises fascinating questions about the productivity and ambition of this interdimensional collective. The integration of visual storytelling with audio artifacts represents an evolutionary leap in their communication methodology. This researcher theorizes that "Shapes" may represent the collective's attempt to document their own story - a meta-narrative about interdimensional musical entities sharing their experiences across reality boundaries. 
                 <br><br>
                 As excavation continues, our team maintains scientific objectivity while acknowledging the extraordinary nature of these discoveries. Whatever "Shapes" ultimately reveals, it promises to expand our understanding of Case #1310 significantly. 
@@ -160,16 +112,19 @@
                 Documentation will be updated as artifacts are recovered and analyzed. The archaeological community - and anyone interested in interdimensional creative collaboration - should monitor this site for developments.
                 <br><br>
                 <strong style="color: #8b0000;">The dig continues. The story unfolds. Stay tuned.</strong>
-            </p>
+            </div>
 
+            <div class="data-tag">
+                RECORD_ID: TME-REC-002 | COLLECTION: SHAPES | STATUS: EXCAVATION IN PROGRESS
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: EXCAVATION IN PROGRESS | Document ID: TME-1310-SHAPES-DISCOVERY</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">⚠ SECONDARY COLLECTION DETECTED - ANALYSIS ONGOING ⚠</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-SHAPES | SESSION: ACTIVE</p>
     </footer>
 </body>
 </html>
