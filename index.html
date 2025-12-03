@@ -7,126 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <style>
-        /* Page-specific styles for index.html */
-        .stars {
-            display: none;
-        }
+        /* Page-specific: hide stars element */
+        .stars { display: none; }
 
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        header .archive-label {
-            margin-bottom: 40px;
-        }
-
-        .tagline {
-            font-size: 1.3rem;
-            color: #3d2813;
-            margin-bottom: 5px;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        .genre {
-            font-size: 1.1rem;
-            color: #5a3a1a;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .location {
-            font-size: 1rem;
-            color: #5a3a1a;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .case-number {
-            font-size: 1.1rem;
-            color: #8b0000;
-            margin-bottom: 40px;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            color: #3d2813;
-            font-weight: bold;
-        }
-
-        /* Keep header centered */
-        header .section-label {
-            text-align: center;
-        }
-
-        /* Album section keeps image centered but text left */
-        .album-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .album-header img {
-            max-width: 350px;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            border: 3px solid rgba(101, 67, 33, 0.6);
-        }
-
-        .album-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: nowrap;
-            margin-top: 20px;
-        }
-
-        .album-buttons .cta-button {
-            padding: 12px 24px;
-            font-size: 0.95rem;
-            margin: 0;
-            white-space: nowrap;
-        }
-
-        /* Members section keeps center alignment */
+        /* Center alignment overrides for index sections */
         #members .section-label,
-        #members h2 {
-            text-align: center;
-        }
-
-        /* Contact section keeps center alignment */
+        #members h2,
         #contact .section-label,
-        #contact h2 {
-            text-align: center;
-        }
-
-        /* Updates section */
+        #contact h2,
         #updates .section-label,
-        #updates h2 {
-            text-align: center;
-        }
-
+        #updates h2,
         #updates p {
             text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .album-buttons {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
         }
     </style>
 </head>
@@ -141,7 +33,7 @@
 
     <div class="stars" id="stars"></div>
 
-    <header>
+    <header class="home-header">
         <div class="archive-label">CLASSIFIED - ARCHAEOLOGICAL RESEARCH ARCHIVE</div>
         <div class="stamp-container">
             <h1 class="logo">
@@ -180,7 +72,7 @@
                 <p class="body-text">
                     Ten audio artifacts spanning multiple genres and production approaches. Notable characteristics include embedded musical references, layered arrangements, and integration of comedic elements within progressive rock structures. Repeated listening recommended for comprehensive analysis.
                 </p>
-                <div class="album-buttons">
+                <div class="button-group">
                     <a href="boney-files.html" class="cta-button">Complete Artifact Analysis</a>
                     <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Files</a>
                     <a href="videos.html" class="cta-button">View Visual Documentation</a>
@@ -194,7 +86,7 @@
 
     <section id="members">
         <div class="section-label">[PERSONNEL] Subject Identifications - Core Group</div>
-        <h2>Personnel Records</h2>
+        <h2 class="centered">Personnel Records</h2>
         <div class="members">
             <a href="stephen-murphy.html" class="member-card">
                 <div class="member-name">Stephen A. Murphy</div>
@@ -214,36 +106,36 @@
             </a>
         </div>
         
-        <div class="section-label" style="margin-top: 60px;">[PERSONNEL] Supplementary Contributors</div>
-        <h2 style="margin-top: 20px;">Guest Collaborators</h2>
+        <div class="section-label mt-60">[PERSONNEL] Supplementary Contributors</div>
+        <h2 class="centered mt-20">Guest Collaborators</h2>
         <div class="members">
             <div class="member-card" style="cursor: default;">
                 <div class="member-name">Roy Nelson</div>
-                <div class="member-role">Harmonica<br><span style="font-size: 0.9rem; opacity: 0.8;">Too Far North (To Get a Tan)</span></div>
+                <div class="member-role">Harmonica<br><span class="text-muted">Too Far North (To Get a Tan)</span></div>
             </div>
             <div class="member-card" style="cursor: default;">
                 <div class="member-name">Eden Meshida</div>
-                <div class="member-role">Bass<br><span style="font-size: 0.9rem; opacity: 0.8;">CFC Free (Cling Film Figurines)</span></div>
+                <div class="member-role">Bass<br><span class="text-muted">CFC Free (Cling Film Figurines)</span></div>
             </div>
             <div class="member-card" style="cursor: default;">
                 <div class="member-name">Karen Shafer</div>
-                <div class="member-role">Doors<br><span style="font-size: 0.9rem; opacity: 0.8;">The Search, What's in the Box?</span></div>
+                <div class="member-role">Doors<br><span class="text-muted">The Search, What's in the Box?</span></div>
             </div>
             <div class="member-card" style="cursor: default;">
                 <div class="member-name">Suki</div>
-                <div class="member-role">Barks<br><span style="font-size: 0.9rem; opacity: 0.8;">The Search, What's in the Box?</span></div>
+                <div class="member-role">Barks<br><span class="text-muted">The Search, What's in the Box?</span></div>
             </div>
         </div>
     </section>
 
     <section id="updates">
         <div class="breaking-news">
-            <div class="section-label" style="color: #8b0000;">[ALERT] Status Update</div>
-            <h2 style="color: #8b0000; text-align: center;">Secondary Artifact Collection Identified</h2>
-            <p style="color: #1a1a1a; font-size: 1.05rem; line-height: 1.8; text-align: center; margin-bottom: 20px;">
+            <div class="section-label text-urgent">[ALERT] Status Update</div>
+            <h2 class="centered text-urgent">Secondary Artifact Collection Identified</h2>
+            <p class="body-text text-center mb-20">
                 Field teams have identified evidence of a second album, designated <strong>"SHAPES"</strong>, featuring integrated visual narrative components. Initial comic frame recovered and catalogued. Analysis in progress.
             </p>
-            <div style="text-align: center;">
+            <div class="text-center">
                 <a href="shapes.html" class="cta-button new">View Documentation</a>
             </div>
         </div>
@@ -251,21 +143,21 @@
 
     <section id="contact">
         <div class="section-label">[EXT_LINK] External Documentation Channels</div>
-        <h2>Reference Materials</h2>
+        <h2 class="centered">Reference Materials</h2>
         <div class="social-links">
             <a href="https://themurphyexperiment.bandcamp.com/" class="social-link" target="_blank">Bandcamp Archive</a>
             <a href="https://substack.com/@monsterplow" class="social-link" target="_blank">Substack Publication</a>
             <a href="mailto:themurphyexperiment@gmail.com" class="social-link">Direct Contact</a>
         </div>
-        <div style="text-align: center; margin-top: 40px; color: #1a1a1a; font-size: 1.05rem;">
-            <p class="body-text" style="text-align: center; font-style: italic;">Support for independent archival work enables continued documentation and analysis of this ongoing phenomenon.</p>
+        <div class="text-center mt-40">
+            <p class="body-text text-center text-italic">Support for independent archival work enables continued documentation and analysis of this ongoing phenomenon.</p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
-        <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-INDEX | SESSION: ACTIVE</p>
+        <p class="mt-20 text-italic">"Yeah, but what if we tried THIS instead?"</p>
+        <p class="data-tag text-center" style="border-top: none; padding-top: 0;">Document ID: TME-1310-INDEX | SESSION: ACTIVE</p>
     </footer>
 
     <script>
