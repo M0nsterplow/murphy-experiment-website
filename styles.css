@@ -29,7 +29,10 @@ body::before {
     z-index: 0;
 }
 
-/* Logo and Branding */
+/* ============================================
+   LOGO AND BRANDING
+   ============================================ */
+
 .logo {
     font-family: 'Special Elite', cursive;
     font-size: 3rem;
@@ -79,7 +82,11 @@ body::before {
     letter-spacing: 0.05em;
 }
 
-/* Headers */
+/* ============================================
+   HEADER LAYOUTS
+   ============================================ */
+
+/* Default header */
 header {
     position: relative;
     padding: 40px 20px;
@@ -87,17 +94,35 @@ header {
     background: transparent;
 }
 
-h2 {
-    font-family: 'Special Elite', cursive;
-    font-size: 2rem;
-    color: #3d2813;
-    margin-bottom: 25px;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-    font-weight: bold;
+/* Page header - inner pages with stamp (about, boney-files, videos, shapes, bio pages) */
+.page-header {
+    padding: 60px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Stamp Container - for pages with full logo stamp */
+.page-header .archive-label {
+    margin-bottom: 40px;
+}
+
+/* Home header - full viewport height for index.html */
+.home-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header .archive-label {
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   STAMP CONTAINER
+   ============================================ */
+
 .stamp-container {
     position: relative;
     display: inline-block;
@@ -189,12 +214,46 @@ h2 {
     margin-top: 2px;
 }
 
-/* Sections */
+/* ============================================
+   HEADINGS
+   ============================================ */
+
+h2 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
+    color: #3d2813;
+    margin-bottom: 25px;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+h2.centered {
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.6rem;
+    color: #3d2813;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
 section {
     position: relative;
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* First section after page-header - reduced top padding */
+.section-first {
+    padding-top: 20px;
 }
 
 /* Content Column for narrow layout - centered */
@@ -203,7 +262,10 @@ section {
     margin: 0 auto;
 }
 
-/* Body text styling */
+/* ============================================
+   BODY TEXT
+   ============================================ */
+
 .body-text {
     font-family: 'Lora', serif;
     color: #1a1a1a;
@@ -225,7 +287,10 @@ section {
     text-align: left;
 }
 
-/* Buttons and Links */
+/* ============================================
+   BUTTONS AND LINKS
+   ============================================ */
+
 .back-link {
     font-family: 'Special Elite', cursive;
     background: linear-gradient(180deg, #d4b896 0%, #b89860 100%);
@@ -392,9 +457,46 @@ section {
     box-shadow: 0 0px 0 #8a6d3b, 0 1px 2px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 
-/* Content Boxes */
+/* Button container for horizontal grouping */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.button-group.centered {
+    justify-content: center;
+}
+
+/* ============================================
+   CONTENT BOXES
+   ============================================ */
+
+.content-box {
+    background: rgba(245, 230, 211, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid rgba(101, 67, 33, 0.6);
+    backdrop-filter: blur(10px);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content-box.large-padding {
+    padding: 60px 40px;
+}
+
+.content-box.centered {
+    text-align: center;
+}
+
+/* Legacy aliases */
 .about-content,
-.profile-content {
+.profile-content,
+.discovery-content {
     background: rgba(245, 230, 211, 0.95);
     padding: 40px;
     border-radius: 20px;
@@ -408,22 +510,6 @@ section {
 
 .profile-content {
     padding: 60px 40px;
-}
-
-.artifact-note {
-    font-family: 'IBM Plex Mono', monospace;
-    color: #1a1a1a;
-    font-size: 0.85rem;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    padding: 20px;
-    background: rgba(1, 66, 8, 0.08);
-    border-left: 3px solid #014208;
-    border-radius: 0 5px 5px 0;
-}
-
-.artifact-note strong {
-    color: #014208;
 }
 
 .album-section {
@@ -444,6 +530,10 @@ section {
     text-align: left;
 }
 
+.album-title.centered {
+    text-align: center;
+}
+
 .album-subtitle {
     font-size: 1.2rem;
     color: #5a3a1a;
@@ -453,7 +543,89 @@ section {
     text-align: left;
 }
 
-/* Bio Pages */
+.album-subtitle.centered {
+    text-align: center;
+}
+
+/* ============================================
+   NOTES AND CALLOUTS
+   ============================================ */
+
+.artifact-note {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #1a1a1a;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(1, 66, 8, 0.08);
+    border-left: 3px solid #014208;
+    border-radius: 0 5px 5px 0;
+}
+
+.artifact-note strong {
+    color: #014208;
+}
+
+/* Alternate artifact note style (red border) */
+.artifact-note.urgent {
+    background: rgba(139, 90, 43, 0.15);
+    border-left: 4px solid #8b0000;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.artifact-note.urgent strong {
+    color: #8b0000;
+}
+
+/* Evidence note - green variant */
+.evidence-note {
+    background: rgba(1, 66, 8, 0.1);
+    border-left: 5px solid #014208;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 30px 0;
+    font-style: italic;
+}
+
+/* ============================================
+   ALERT BOXES
+   ============================================ */
+
+.urgent-box {
+    background: rgba(139, 0, 0, 0.2);
+    border: 4px double #8b0000;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 30px 0;
+    animation: pulse-border 2s infinite;
+}
+
+.urgent-box h3 {
+    color: #8b0000;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.breaking-news {
+    background: rgba(139, 0, 0, 0.15);
+    border: 3px solid #8b0000;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    animation: pulse-border 3s infinite;
+}
+
+/* ============================================
+   BIO PAGES
+   ============================================ */
+
 .revelation-box {
     background: rgba(139, 0, 0, 0.15);
     border: 3px solid #8b0000;
@@ -489,6 +661,62 @@ section {
     border-radius: 15px;
     margin: 40px 0;
     text-align: center;
+}
+
+/* ============================================
+   GRIDS AND CARDS
+   ============================================ */
+
+/* Generic 2-column grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 8px;
+}
+
+/* Auto-fit grid for flexible columns */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Content card - generic */
+.content-card {
+    background: rgba(245, 230, 211, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid rgba(101, 67, 33, 0.6);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content-card.placeholder {
+    background: rgba(212, 197, 160, 0.7);
+    border: 3px dashed rgba(139, 0, 0, 0.5);
+    opacity: 0.8;
+}
+
+/* Info card - smaller variant */
+.info-card {
+    background: rgba(212, 197, 160, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(101, 67, 33, 0.5);
+}
+
+.info-card h3,
+.info-card h4 {
+    color: #3d2813;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info-card p {
+    color: #2a2a2a;
+    line-height: 1.6;
 }
 
 /* Member Cards */
@@ -541,17 +769,364 @@ section {
     margin-top: 40px;
 }
 
-/* Special Effects */
-.breaking-news {
-    background: rgba(139, 0, 0, 0.15);
-    border: 3px solid #8b0000;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    animation: pulse-border 3s infinite;
+/* ============================================
+   VIDEO COMPONENTS
+   ============================================ */
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder-box {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(139, 0, 0, 0.1),
+        rgba(139, 0, 0, 0.1) 10px,
+        rgba(139, 0, 0, 0.05) 10px,
+        rgba(139, 0, 0, 0.05) 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(139, 0, 0, 0.3);
+}
+
+.placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #8b0000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.video-title {
+    font-size: 1.5rem;
+    color: #3d2813;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-card.placeholder .video-title {
+    color: #8b0000;
+    opacity: 0.7;
+}
+
+.video-code {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #8b0000;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ============================================
+   STATUS BADGES
+   ============================================ */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.status-badge.available {
+    background: rgba(0, 100, 0, 0.2);
+    color: #006400;
+    border: 1px solid #006400;
+}
+
+.status-badge.pending {
+    background: rgba(139, 0, 0, 0.2);
+    color: #8b0000;
+    border: 1px solid #8b0000;
+}
+
+/* ============================================
+   TRACKLIST
+   ============================================ */
+
+.tracklist {
+    background: rgba(245, 230, 211, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    border: 3px solid rgba(101, 67, 33, 0.6);
+    margin-top: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(101, 67, 33, 0.3);
+    transition: all 0.3s;
+}
+
+.track:last-child {
+    border-bottom: none;
+}
+
+.track:hover {
+    background: rgba(212, 197, 160, 0.5);
+    padding-left: 25px;
+}
+
+.track-number {
+    font-weight: bold;
+    color: #5a3a1a;
+    min-width: 40px;
+}
+
+.track-title {
+    flex: 1;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.track-duration {
+    color: #5a3a1a;
+    font-weight: bold;
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+    padding: 20px;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: zoomIn 0.3s;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(139, 0, 0, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.lightbox-close:hover {
+    background: rgba(139, 0, 0, 1);
+    transform: rotate(90deg);
+}
+
+/* ============================================
+   IMAGES
+   ============================================ */
+
+/* Clickable image container with hover effect */
+.image-clickable {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.image-clickable img {
+    transition: all 0.3s;
+}
+
+.image-clickable:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+.image-clickable::after {
+    content: '🔍 Click to enlarge';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.image-clickable:hover::after {
+    opacity: 1;
+}
+
+.image-label {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #5a3a1a;
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Standard bordered image */
+.bordered-image {
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    border: 3px solid rgba(101, 67, 33, 0.6);
+}
+
+/* Banner image - full width */
+.banner-image {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+    border: 4px solid rgba(139, 0, 0, 0.8);
+    margin: 30px 0;
+    display: block;
+}
+
+/* Comic frame image */
+.comic-frame {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border: 3px solid rgba(101, 67, 33, 0.6);
+    margin: 30px auto;
+    display: block;
+}
+
+/* ============================================
+   INDEX PAGE SPECIFIC
+   ============================================ */
+
+.tagline {
+    font-size: 1.3rem;
+    color: #3d2813;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.genre {
+    font-size: 1.1rem;
+    color: #5a3a1a;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 1rem;
+    color: #5a3a1a;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.case-number {
+    font-size: 1.1rem;
+    color: #8b0000;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #3d2813;
+    font-weight: bold;
+}
+
+/* Album header on index */
+.album-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.album-header img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    border: 3px solid rgba(101, 67, 33, 0.6);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -561,7 +1136,20 @@ footer {
     font-weight: bold;
 }
 
-/* Animations */
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.02); }
@@ -587,7 +1175,33 @@ footer {
     50% { transform: translateX(-50%) translateY(-10px); }
 }
 
-/* Responsive Design */
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-italic { font-style: italic; }
+.text-bold { font-weight: bold; }
+.text-urgent { color: #8b0000; }
+.text-muted { opacity: 0.7; }
+
+.mt-0 { margin-top: 0; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
 @media (max-width: 1024px) {
     .members {
         grid-template-columns: repeat(2, 1fr);
@@ -635,6 +1249,10 @@ footer {
         font-size: 1.6rem;
     }
 
+    h3 {
+        font-size: 1.4rem;
+    }
+
     .album-title {
         font-size: 1.8rem;
     }
@@ -643,8 +1261,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
     .about-content,
-    .profile-content {
+    .profile-content,
+    .content-box {
         padding: 25px;
     }
 
@@ -660,5 +1283,24 @@ footer {
     .conclusion-link {
         font-size: 0.9rem;
         padding: 12px 20px;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .track {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .lightbox-modal {
+        padding: 10px;
     }
 }

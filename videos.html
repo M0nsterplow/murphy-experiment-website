@@ -6,155 +6,6 @@
     <title>Visual Evidence Archive | The Murphy Experiment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <style>
-        /* Page-specific styles for videos.html */
-        header {
-            padding: 60px 20px 10px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header .archive-label {
-            margin-bottom: 40px;
-        }
-
-        #videos {
-            padding-top: 20px;
-        }
-
-        .artifact-note {
-            color: #1a1a1a;
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-style: italic;
-            padding: 20px;
-            background: rgba(139, 90, 43, 0.15);
-            border-left: 4px solid #8b0000;
-            border-radius: 5px;
-        }
-
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 8px;
-        }
-
-        .video-container {
-            background: rgba(245, 230, 211, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            border: 3px solid rgba(101, 67, 33, 0.6);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-container.placeholder {
-            background: rgba(212, 197, 160, 0.7);
-            border: 3px dashed rgba(139, 0, 0, 0.5);
-            opacity: 0.8;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .placeholder-box {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(139, 0, 0, 0.1),
-                rgba(139, 0, 0, 0.1) 10px,
-                rgba(139, 0, 0, 0.05) 10px,
-                rgba(139, 0, 0, 0.05) 20px
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid rgba(139, 0, 0, 0.3);
-        }
-
-        .placeholder-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #8b0000;
-            font-weight: bold;
-            font-size: 1.1rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .video-title {
-            font-size: 1.5rem;
-            color: #3d2813;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .placeholder .video-title {
-            color: #8b0000;
-            opacity: 0.7;
-        }
-
-        .video-code {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #8b0000;
-            letter-spacing: 0.1em;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.7rem;
-            letter-spacing: 0.08em;
-            margin-left: 10px;
-            font-weight: bold;
-        }
-
-        .status-available {
-            background: rgba(0, 100, 0, 0.2);
-            color: #006400;
-            border: 1px solid #006400;
-        }
-
-        .status-pending {
-            background: rgba(139, 0, 0, 0.2);
-            color: #8b0000;
-            border: 1px solid #8b0000;
-        }
-
-        @media (max-width: 768px) {
-            .videos-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- SVG filter for stamp distress effect -->
@@ -165,7 +16,7 @@
         </filter>
     </svg>
 
-    <header>
+    <header class="page-header">
         <div class="archive-label">RECOVERED VISUAL DOCUMENTATION</div>
         <div class="stamp-container">
             <h1 class="logo">
@@ -181,16 +32,16 @@
         <p class="page-subtitle">Video Evidence Analysis</p>
     </header>
 
-    <section id="videos">
+    <section id="videos" class="section-first">
         <div class="section-label">[VID_CATALOG] VISUAL EVIDENCE ARCHIVE</div>
-        <div class="artifact-note">
+        <div class="artifact-note urgent">
             <strong>Archivist's Assessment:</strong> Ten visual artifacts identified corresponding to Primary Artifact Collection #1 track sequence. Current recovery status: 6 of 10 artifacts successfully restored and authenticated. Remaining 4 items undergoing digital restoration and authentication protocols. Analysis of recovered items reveals consistent aesthetic choices and performance documentation. Items VID-005, VID-007, VID-008, and VID-009 remain in laboratory analysis - corrupted data being reconstructed. Estimated completion: Progressive release schedule. Quality: High-definition. Authentication status: In progress. Dimensional anomalies detected: Under investigation.
         </div>
         <div class="section-label">[VID_001-010] RECOVERED FOOTAGE</div>
-        <div class="videos-grid">
+        <div class="content-grid">
             <!-- VID-001 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-001 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-001 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">The Search, What's in the Box?</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126403069?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="The Search, What's in the Box?"></iframe>
@@ -198,8 +49,8 @@
             </div>
 
             <!-- VID-002 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-002 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-002 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">Too Far North (To Get a Tan)</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126666770?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Too Far North (To Get a Tan)"></iframe>
@@ -207,8 +58,8 @@
             </div>
 
             <!-- VID-003 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-003 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-003 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">Making Sense</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126683545?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Making Sense"></iframe>
@@ -216,8 +67,8 @@
             </div>
 
             <!-- VID-004 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-004 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-004 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">Thursdays</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126706301?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Thursdays"></iframe>
@@ -225,8 +76,8 @@
             </div>
 
             <!-- VID-005 PLACEHOLDER -->
-            <div class="video-container placeholder">
-                <div class="video-code">EVIDENCE ITEM: VID-005 <span class="status-badge status-pending">UNDER INVESTIGATION</span></div>
+            <div class="content-card placeholder">
+                <div class="video-code">EVIDENCE ITEM: VID-005 <span class="status-badge pending">UNDER INVESTIGATION</span></div>
                 <div class="video-title">CFC Free (Cling Film Figurines) Live at Paddy's</div>
                 <div class="placeholder-box">
                     <div class="placeholder-text">⚠ DATA RECONSTRUCTION IN PROGRESS ⚠<br><br>RESTORATION PENDING</div>
@@ -234,8 +85,8 @@
             </div>
 
             <!-- VID-006 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-006 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-006 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">Punch</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1126748070?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Punch"></iframe>
@@ -243,8 +94,8 @@
             </div>
 
             <!-- VID-007 PLACEHOLDER -->
-            <div class="video-container placeholder">
-                <div class="video-code">EVIDENCE ITEM: VID-007 <span class="status-badge status-pending">UNDER INVESTIGATION</span></div>
+            <div class="content-card placeholder">
+                <div class="video-code">EVIDENCE ITEM: VID-007 <span class="status-badge pending">UNDER INVESTIGATION</span></div>
                 <div class="video-title">Idle Bones</div>
                 <div class="placeholder-box">
                     <div class="placeholder-text">⚠ DATA RECONSTRUCTION IN PROGRESS ⚠<br><br>RESTORATION PENDING</div>
@@ -252,8 +103,8 @@
             </div>
 
             <!-- VID-008 PLACEHOLDER -->
-            <div class="video-container placeholder">
-                <div class="video-code">EVIDENCE ITEM: VID-008 <span class="status-badge status-pending">UNDER INVESTIGATION</span></div>
+            <div class="content-card placeholder">
+                <div class="video-code">EVIDENCE ITEM: VID-008 <span class="status-badge pending">UNDER INVESTIGATION</span></div>
                 <div class="video-title">Climatize</div>
                 <div class="placeholder-box">
                     <div class="placeholder-text">⚠ DATA RECONSTRUCTION IN PROGRESS ⚠<br><br>RESTORATION PENDING</div>
@@ -261,8 +112,8 @@
             </div>
 
             <!-- VID-009 PLACEHOLDER -->
-            <div class="video-container placeholder">
-                <div class="video-code">EVIDENCE ITEM: VID-009 <span class="status-badge status-pending">UNDER INVESTIGATION</span></div>
+            <div class="content-card placeholder">
+                <div class="video-code">EVIDENCE ITEM: VID-009 <span class="status-badge pending">UNDER INVESTIGATION</span></div>
                 <div class="video-title">Rock Paper Scissors</div>
                 <div class="placeholder-box">
                     <div class="placeholder-text">⚠ DATA RECONSTRUCTION IN PROGRESS ⚠<br><br>RESTORATION PENDING</div>
@@ -270,8 +121,8 @@
             </div>
 
             <!-- VID-010 -->
-            <div class="video-container">
-                <div class="video-code">EVIDENCE ITEM: VID-010 <span class="status-badge status-available">AVAILABLE</span></div>
+            <div class="content-card">
+                <div class="video-code">EVIDENCE ITEM: VID-010 <span class="status-badge available">AVAILABLE</span></div>
                 <div class="video-title">Cow Theme Parks</div>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/940311827?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Cow Theme Parks"></iframe>
@@ -282,9 +133,9 @@
 
     <footer>
         <a href="index.html" class="back-link">← Return to Archive Index</a>
-        <p style="margin-top: 20px;">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
-        <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-VIDEO | RECOVERY STATUS: 6/10 ARTIFACTS AUTHENTICATED</p>
+        <p class="mt-20">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <p class="mt-20 text-italic">"Yeah, but what if we tried THIS instead?"</p>
+        <p class="data-tag text-center" style="border-top: none; padding-top: 0;">Document ID: TME-1310-VIDEO | RECOVERY STATUS: 6/10 ARTIFACTS AUTHENTICATED</p>
     </footer>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
