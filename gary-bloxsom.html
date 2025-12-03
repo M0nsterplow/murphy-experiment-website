@@ -8,53 +8,74 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 </head>
 <body>
-    <header>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <header class="page-header">
         <div class="archive-label">SUBJECT PROFILE - PERSONNEL FILE</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">CLASSIFIED - EXTRAORDINARY DISCOVERY</p>
-        <div style="margin-top: 20px;">
-            <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
         </div>
+        <p class="page-subtitle">Subject Dossier - Rhythm Architect</p>
     </header>
-    <section>
-        <div class="section-label">CASE #1310 - SUBJECT DOCUMENTATION [SUBJECT 2 OF 4]</div>
-        <h2>Gary Bloxsom</h2>
+
+    <section class="section-first">
+        <div class="section-label">[SUBJ_002] SUBJECT DOCUMENTATION</div>
         <div class="profile-content">
-            <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Percussionist • Rhythm Architect • Backing Vocalist</p>
-            <p style="text-align: center; margin-bottom: 40px; font-style: italic;">Drums, Percussion, Backing Vocals</p>
+            <h2 class="text-center">Gary Bloxsom</h2>
+            <p class="text-center mb-20"><strong>Percussionist • Rhythm Architect • Backing Vocalist</strong></p>
+            <p class="text-center mb-20" style="font-style: italic;">Drums, Percussion, Backing Vocals</p>
             
             <div class="revelation-box">
                 <h3>⚠ CRITICAL DISCOVERY - AUTHENTICATION PENDING ⚠</h3>
                 <p style="font-style: italic; margin-top: 15px;"><strong>BREAKTHROUGH UPDATE:</strong> Continuing dimensional analysis protocols on recovered personnel documentation has yielded second confirmed anomaly. Subject "Gary Bloxsom" exhibits identical rendering inconsistencies discovered in Subject Murphy's file. Enhanced spectral analysis reveals dimensional signature matching parallel reality entity identified as:</p>
-                <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">CAPTAIN BASH GLOCKENHEIM</p>
+                <p class="text-center" style="font-size: 1.3rem; font-weight: bold; margin: 20px 0; color: #8b0000;">CAPTAIN BASH GLOCKENHEIM</p>
                 <p style="font-style: italic;">Cross-dimensional profile indicates: Military or leadership background, precision-oriented personality, expertise in rhythmic/temporal coordination. Rank designation "Captain" suggests command experience and tactical thinking. Visual evidence confirms dimensional origin.</p>
             </div>
 
             <img src="media/captain-bash-glockenheim.jpg" alt="Captain Bash Glockenheim" class="character-image">
             
-            <p style="margin-top: 30px;"><strong>Dimensional Profile Assessment:</strong> The "Captain" rank designation provides crucial context for subject's role within Case #1310. Military precision training would explain the exceptional temporal accuracy documented in percussion work across all recovered audio artifacts. Rhythmic foundation demonstrates discipline and exactitude characteristic of command-level personnel from structured dimensional hierarchies.</p>
+            <p class="body-text mt-20"><strong>Dimensional Profile Assessment:</strong> The "Captain" rank designation provides crucial context for subject's role within Case #1310. Military precision training would explain the exceptional temporal accuracy documented in percussion work across all recovered audio artifacts. Rhythmic foundation demonstrates discipline and exactitude characteristic of command-level personnel from structured dimensional hierarchies.</p>
 
-            <p style="margin-top: 20px;"><strong>Behavioral Analysis:</strong> Character archetype suggests: disciplined approach to creativity, methodical problem-solving, ability to maintain structural integrity while allowing experimental elements around established framework. The surname "Glockenheim" (Germanic root: "bell home") demonstrates dimensional reality's sophisticated naming conventions aligned with subject's percussive specialization.</p>
+            <p class="body-text"><strong>Behavioral Analysis:</strong> Character archetype suggests: disciplined approach to creativity, methodical problem-solving, ability to maintain structural integrity while allowing experimental elements around established framework. The surname "Glockenheim" (Germanic root: "bell home") demonstrates dimensional reality's sophisticated naming conventions aligned with subject's percussive specialization.</p>
 
-            <p style="margin-top: 20px;"><strong>Temporal Coordination Theory:</strong> Subject's documented "chronological sensitivity" (previously noted in preliminary research) now appears non-metaphorical. Dimensional entities may possess enhanced temporal perception, explaining superhuman timing precision and ability to synchronize across vast geographic distances during remote recording sessions.</p>
+            <p class="body-text"><strong>Temporal Coordination Theory:</strong> Subject's documented "chronological sensitivity" (previously noted in preliminary research) now appears non-metaphorical. Dimensional entities may possess enhanced temporal perception, explaining superhuman timing precision and ability to synchronize across vast geographic distances during remote recording sessions.</p>
 
-            <p style="font-style: italic; color: #8b0000; margin-top: 40px;"><strong>Researcher's Assessment:</strong> Two confirmed interdimensional subjects within four-member core group. Probability of coincidence: negligible. Case #1310 hypothesis upgraded from "possible" to "probable." Subject group appears to be deliberate assembly of dimensional entities, each bringing specialized capabilities. Music may serve as inter-reality bridge protocol. Continuing investigation on remaining personnel: urgent priority.</p>
+            <p class="body-text" style="font-style: italic; color: #8b0000;"><strong>Researcher's Assessment:</strong> Two confirmed interdimensional subjects within four-member core group. Probability of coincidence: negligible. Case #1310 hypothesis upgraded from "possible" to "probable." Subject group appears to be deliberate assembly of dimensional entities, each bringing specialized capabilities. Music may serve as inter-reality bridge protocol. Continuing investigation on remaining personnel: urgent priority.</p>
 
             <div class="navigation-box">
                 <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #8b0000;">INVESTIGATION SEQUENCE</p>
-                <p style="margin-bottom: 20px;">Second dimensional entity confirmed. Pattern emerging. Continuing analysis of remaining subjects.</p>
+                <p class="mb-20">Second dimensional entity confirmed. Pattern emerging. Continuing analysis of remaining subjects.</p>
                 <div>
                     <a href="stephen-murphy.html" class="prev-link">← Previous: Stephen A. Murphy</a>
                     <a href="john-caulfield.html" class="next-link">Continue to Subject 3: John Caulfield →</a>
                 </div>
             </div>
+
+            <div class="data-tag">
+                RECORD_ID: TME-BIO-002 | SUBJECT: BLOXSOM/GLOCKENHEIM | STATUS: DIMENSIONAL ORIGIN CONFIRMED
+            </div>
         </div>
     </section>
+
     <footer>
-        <p>© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p class="mt-20">© 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: RESTRICTED | Document ID: TME-1310-BIO-GB-REVISED</p>
-        <p style="margin-top: 5px; font-size: 0.85rem; color: #8b0000;">⚠ INTERDIMENSIONAL EVIDENCE DETECTED ⚠</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-BIO-GB | SESSION: ACTIVE</p>
     </footer>
 </body>
 </html>
