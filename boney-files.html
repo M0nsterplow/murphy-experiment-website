@@ -8,6 +8,21 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <style>
         /* Page-specific styles for boney-files.html */
+        header {
+            padding: 60px 20px 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .archive-label {
+            margin-bottom: 40px;
+        }
+
+        #album {
+            padding-top: 20px;
+        }
+
         .album-section {
             background: rgba(245, 230, 211, 0.95);
             padding: 60px 40px;
@@ -58,19 +73,12 @@
             padding: 30px;
             border-radius: 15px;
             border: 2px solid rgba(101, 67, 33, 0.5);
-            transition: all 0.3s;
-        }
-
-        .detail-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(101, 67, 33, 0.8);
-            box-shadow: 0 10px 30px rgba(101, 67, 33, 0.3);
         }
 
         .detail-card h3 {
             color: #3d2813;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
         }
 
@@ -84,7 +92,7 @@
             padding: 30px;
             border-radius: 15px;
             border: 3px solid rgba(101, 67, 33, 0.6);
-            margin-top: 40px;
+            margin-top: 8px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
@@ -121,6 +129,15 @@
         .track-duration {
             color: #5a3a1a;
             font-weight: bold;
+        }
+
+        #credits .about-content {
+            margin-top: 8px;
+        }
+
+        #credits .about-content h2 {
+            text-align: left;
+            margin-bottom: 20px;
         }
 
         /* Album covers container */
@@ -278,15 +295,32 @@
     </style>
 </head>
 <body>
+    <!-- SVG filter for stamp distress effect -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="stamp-rough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
     <header>
-        <div class="archive-label">PRIMARY ARTIFACT COLLECTION #1</div>
-        <h1 class="logo">THE MURPHY EXPERIMENT</h1>
-        <p style="color: #3d2813; font-size: 1.1rem; font-style: italic; font-weight: bold;">Detailed Artifact Analysis</p>
-        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <div class="archive-label">AUDIO COLLECTION - CASE #1310</div>
+        <div class="stamp-container">
+            <h1 class="logo">
+                <span class="logo-line">THE MURPHY</span>
+                <span class="logo-line">EXPERIMENT</span>
+            </h1>
+            <div class="postmark">
+                <span class="postmark-text-top">VALIDATED</span>
+                <span class="postmark-date">08 MAR 3147</span>
+                <span class="postmark-text-bottom">ARCHIVE DEPT</span>
+            </div>
+        </div>
+        <p class="page-subtitle">Primary Collection - Technical Analysis</p>
     </header>
 
     <section id="album">
-        <div class="section-label">CASE #1310 - COLLECTION ANALYSIS</div>
+        <div class="section-label">[REC_001] PRIMARY AUDIO COLLECTION</div>
         <div class="album-section">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 30px;">
                 <div class="album-covers-container">
@@ -309,15 +343,15 @@
                 </div>
             </div>
             <div class="artifact-note">
-                <strong>Initial Assessment:</strong> This primary collection exhibits remarkable diversity in sonic composition, spanning the early-mid 21st century temporal period. Each discrete audio artifact demonstrates evolutionary progression in technical proficiency and thematic complexity. Notable observations include: recurring bovine motifs (tracks 5, 10), evidence of spatial experimentation (track 8), and what appears to be encoded dimensional coordinates throughout. Duration analysis suggests intentional pacing - shorter introductory pieces transitioning to extended exploratory compositions. Recommendation: sequential listening approach reveals hidden contextual layers.
+                <strong>Technical Assessment:</strong> This collection represents the primary audio output from the subject group's initial creative period. Production methodology indicates a distributed recording approach across multiple geographic locations, with final assembly occurring over an extended timeline. Stylistic analysis suggests influences from progressive rock traditions with notable integration of comedic and absurdist elements. Track sequencing appears intentional - shorter introductory pieces transitioning to extended exploratory compositions. Recommendation: sequential listening approach exploring contextual layers.
             </div>
-            <p style="color: #1a1a1a; font-size: 1.1rem; line-height: 1.8;">
-                Comprehensive analysis of ten discrete audio artifacts reveals progressive rock foundation enhanced with humor integration, experimental structural divergence, and deliberate absurdist elements. Each composition contains embedded "Easter eggs" - a 21st-century terrestrial practice of concealing secondary content within primary media. Repeated analysis cycles recommended for complete data extraction.
+            <p class="body-text">
+                The collection comprises ten discrete audio artifacts demonstrating varied compositional and genre approaches. Comprehensive analysis reveals progressive rock foundation enhanced with humor integration, experimental structural divergence, and deliberate absurdist elements. Instrumentation is guitar and drum focused with bass and keyboard augmentation. Vocal arrangements range from male and female solo, to multi-part harmonies. Lyrical content addresses themes including geographic displacement, temporal perception, and bovine-related subject matter. Select compositions appear to contain embedded "Easter eggs" - a 21st-century terrestrial practice of concealing secondary content within primary media. Repeated analysis cycles recommended for complete data extraction.
             </p>
             <div class="album-details">
                 <div class="detail-card">
-                    <h3>10 Audio Files</h3>
-                    <p>Sequential narrative arc from initiation to resolution</p>
+                    <h3>10 Tracks</h3>
+                    <p>Variable duration from 1:08 to 7:31</p>
                 </div>
                 <div class="detail-card">
                     <h3>Released October 2025 CE</h3>
@@ -325,17 +359,17 @@
                 </div>
                 <div class="detail-card">
                     <h3>44 Minutes Total</h3>
-                    <p>Genre classification: Progressive/Experimental with comedic elements</p>
+                    <p>Format: Digital distribution via Bandcamp platform</p>
                 </div>
             </div>
             <br><br>
-            <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Archive</a>
-            <a href="videos.html" class="cta-button">View Visual Evidence</a>
+            <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Files</a>
+            <a href="videos.html" class="cta-button">View Visual Materials</a>
         </div>
 
-        <div class="section-label" style="margin-top: 60px;">SEQUENTIAL TRACK DOCUMENTATION</div>
+        <div class="section-label" style="margin-top: 60px;">[REC_001.1] TRACK LISTING</div>
         <div class="tracklist">
-            <h3 style="color: #3d2813; text-align: center; margin-bottom: 20px; font-size: 1.8rem;">Audio Artifact Catalog</h3>
+            <h3 style="color: #3d2813; text-align: center; margin-bottom: 20px; font-size: 1.8rem;">Audio Index</h3>
             <div class="track">
                 <span class="track-number">1.</span>
                 <span class="track-title">The Search, What's in the Box?</span>
@@ -390,25 +424,25 @@
     </section>
 
     <section id="credits">
-        <div class="section-label">PERSONNEL DOCUMENTATION</div>
-        <h2>Confirmed Participants</h2>
+        <div class="section-label">[REC_001.2] PERSONNEL</div>
         <div class="about-content">
-            <p><strong>Primary Subject Group:</strong></p>
+            <h2>Credits</h2>
+            <p><strong>Core Members:</strong></p>
             <p>Stephen A. Murphy - Guitars, Keys, Bass, Vocals</p>
             <p>John Caulfield - Guitars, Vocals</p>
             <p>Gary Bloxsom - Drums, Percussion, Backing Vocals</p>
             <p>Angela Brown - Vocals</p>
             <br>
-            <p><strong>Supplementary Contributors:</strong></p>
-            <p>Roy Nelson - Harmonica (Track 2: Too Far North)</p>
-            <p>Eden Meshida - Bass (Track 5: CFC Free)</p>
-            <p>Karen Shafer - Doors [Physical object manipulation] (Track 1: The Search)</p>
-            <p>Suki - Barks [Canine vocalizations] (Track 1: The Search)</p>
-            <p>Clean the Plate Mojo - Backing Vocals (Track 10: Cow Theme Parks)</p>
-            <p>Wreck the Mic Ange - Backing Vocals (Track 10: Cow Theme Parks)</p>
-            <p>Veggie huggin' Val - Backing Vocals (Track 10: Cow Theme Parks)</p>
+            <p><strong>Additional Contributors:</strong></p>
+            <p>Roy Nelson - Harmonica (Track 2)</p>
+            <p>Eden Meshida - Bass (Track 5)</p>
+            <p>Karen Shafer - Doors (Track 1)</p>
+            <p>Suki - Barks (Track 1)</p>
+            <p>Clean the Plate Mojo - Backing Vocals (Track 10)</p>
+            <p>Wreck the Mic Ange - Backing Vocals (Track 10)</p>
+            <p>Veggie huggin' Val - Backing Vocals (Track 10)</p>
             <br>
-            <p style="font-style: italic; color: #8b0000;"><strong>Researcher's Note:</strong> The inclusion of non-human participants (entity "Suki") and the peculiar alter-ego nomenclature in Track 10 suggest either advanced role-playing behavior or early evidence of the dimensional exploration phenomenon documented in recent excavation findings.</p>
+            <p style="font-style: italic; color: #8b0000;"><strong>Note:</strong> Track 10 credits indicate use of pseudonyms, likely referencing internal group terminology. "Suki" appears to be a domestic canine present during Track 1 recording sessions.</p>
         </div>
     </section>
 
@@ -421,9 +455,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
+        <a href="index.html" class="back-link">← Return to Archive Index</a>
+        <p style="margin-top: 20px;">&copy; 2024 Archaeological Research Archive | Case #1310: The Murphy Experiment</p>
         <p style="margin-top: 10px; font-style: italic;">"Yeah, but what if we tried THIS instead?"</p>
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #8b0000;">CLASSIFICATION LEVEL: UNRESTRICTED | Document ID: TME-1310-BONEY</p>
+        <p class="data-tag" style="text-align: center; margin-top: 15px; border-top: none; padding-top: 0;">Document ID: TME-1310-REC001 | SESSION: ACTIVE</p>
     </footer>
 
     <script>
