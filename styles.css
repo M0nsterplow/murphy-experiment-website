@@ -30,6 +30,188 @@ body::before {
 }
 
 /* ============================================
+   STICKY NAVIGATION
+   ============================================ */
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(212, 197, 160, 0.95);
+    border-bottom: 3px solid rgba(101, 67, 33, 0.6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.site-nav.scrolled {
+    background: rgba(212, 197, 160, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    transition: height 0.3s ease;
+}
+
+.site-nav.scrolled .nav-container {
+    height: 55px;
+}
+
+/* Nav Logo */
+.nav-logo {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1rem;
+    color: #014208;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border: 2px solid #8b0000;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-logo:hover {
+    background: rgba(139, 0, 0, 0.1);
+}
+
+.site-nav.scrolled .nav-logo {
+    font-size: 0.95rem;
+    padding: 4px 10px;
+}
+
+/* Nav Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.85rem;
+    color: #3d2813;
+    text-decoration: none;
+    padding: 8px 14px;
+    display: block;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #014208;
+    background: rgba(1, 66, 8, 0.1);
+    border-color: rgba(1, 66, 8, 0.3);
+}
+
+.nav-link.active {
+    color: #8b0000;
+    border-bottom: 2px solid #8b0000;
+}
+
+/* Dropdown Trigger */
+.nav-link.has-dropdown {
+    padding-right: 22px;
+}
+
+.nav-link.has-dropdown::after {
+    content: '▼';
+    font-size: 0.6rem;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover .nav-link.has-dropdown::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(245, 230, 211, 0.98);
+    border: 2px solid rgba(101, 67, 33, 0.6);
+    border-top: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    list-style: none;
+}
+
+.nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown li {
+    border-bottom: 1px solid rgba(101, 67, 33, 0.2);
+}
+
+.nav-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown .nav-link {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+}
+
+.nav-dropdown .nav-link:hover {
+    background: rgba(1, 66, 8, 0.15);
+}
+
+/* Mobile Nav Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: 2px solid #3d2813;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #3d2813;
+    transition: all 0.3s ease;
+}
+
+/* Body padding to account for fixed nav */
+body {
+    padding-top: 70px;
+}
+
+body.nav-scrolled {
+    padding-top: 55px;
+}
+
+/* ============================================
    LOGO AND BRANDING
    ============================================ */
 
@@ -108,7 +290,7 @@ header {
 
 /* Home header - full viewport height for index.html */
 .home-header {
-    height: 100vh;
+    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1202,6 +1384,64 @@ footer {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* Navigation responsive */
+@media (max-width: 900px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(245, 230, 211, 0.98);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 3px solid rgba(101, 67, 33, 0.6);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .site-nav.scrolled .nav-menu {
+        top: 55px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(101, 67, 33, 0.2);
+    }
+
+    .nav-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid #014208;
+        margin-left: 16px;
+        background: rgba(212, 197, 160, 0.5);
+    }
+
+    .nav-link.has-dropdown::after {
+        right: 16px;
+    }
+}
+
 @media (max-width: 1024px) {
     .members {
         grid-template-columns: repeat(2, 1fr);
@@ -1209,6 +1449,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
     .logo {
         font-size: 2rem;
     }
@@ -1302,5 +1546,10 @@ footer {
 
     .lightbox-modal {
         padding: 10px;
+    }
+
+    .nav-logo {
+        font-size: 0.9rem;
+        padding: 4px 8px;
     }
 }
