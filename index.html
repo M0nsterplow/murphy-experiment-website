@@ -31,6 +31,48 @@
         </filter>
     </svg>
 
+    <!-- Sticky Navigation -->
+    <nav class="site-nav" id="siteNav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">THE MURPHY EXPERIMENT</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Archive Index</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">Recordings</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="boney-files.html" class="nav-link">The Boney Files</a></li>
+                        <li><a href="shapes.html" class="nav-link">Shapes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html" class="nav-link">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link has-dropdown">Personnel</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="stephen-murphy.html" class="nav-link">Stephen Murphy</a></li>
+                        <li><a href="gary-bloxsom.html" class="nav-link">Gary Bloxsom</a></li>
+                        <li><a href="john-caulfield.html" class="nav-link">John Caulfield</a></li>
+                        <li><a href="angela-brown.html" class="nav-link">Angela Brown</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="conclusion.html" class="nav-link">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="stars" id="stars"></div>
 
     <header class="home-header">
@@ -51,7 +93,6 @@
         <div class="genre">- Genre Fluid Rock -</div>
         <div class="location">Origin Points: Tempe, Arizona • Bangor, Northern Ireland | Est. 2020 CE</div>
         <div>
-            <a href="https://themurphyexperiment.bandcamp.com/" class="cta-button" target="_blank">Access Audio Archives</a>
             <a href="about.html" class="cta-button">View Research Report</a>
         </div>
         <div class="scroll-indicator">▼ Continue Review ▼</div>
@@ -169,6 +210,31 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+
+        // Navigation scroll effect
+        const nav = document.getElementById('siteNav');
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile nav toggle
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
             });
         });
     </script>
