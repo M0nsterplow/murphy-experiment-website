@@ -314,7 +314,7 @@
         <div class="section-label mt-60">[REC_001.1] TRACK LISTING</div>
         <div class="tracklist">
             <h3 class="centered mb-20">Audio Index</h3>
-            <div class="track playable" data-track="1" data-src="media/01 - The Search, What's in the Box.mp3" onclick="playTrack(this)">
+            <div class="track playable" data-track="1" data-src="media/Boney Files/01 - The Search, What's in the Box.mp3" onclick="playTrack(this)">
                 <span class="track-number">1.</span>
                 <span class="track-title-wrap">
                     <button class="play-btn" aria-label="Play">▶</button>
@@ -322,24 +322,36 @@
                 </span>
                 <span class="track-duration">1:08</span>
             </div>
-            <div class="track">
+            <div class="track playable" data-track="2" data-src="media/Boney Files/02 - Too Far North (To Get a Tan).mp3" onclick="playTrack(this)">
                 <span class="track-number">2.</span>
-                <span class="track-title">Too Far North (To Get a Tan)</span>
+                <span class="track-title-wrap">
+                    <button class="play-btn" aria-label="Play">▶</button>
+                    <span class="track-title">Too Far North (To Get a Tan)</span>
+                </span>
                 <span class="track-duration">5:12</span>
             </div>
-            <div class="track">
+            <div class="track playable" data-track="3" data-src="media/Boney Files/03 - Making Sense.mp3" onclick="playTrack(this)">
                 <span class="track-number">3.</span>
-                <span class="track-title">Making Sense</span>
+                <span class="track-title-wrap">
+                    <button class="play-btn" aria-label="Play">▶</button>
+                    <span class="track-title">Making Sense</span>
+                </span>
                 <span class="track-duration">3:00</span>
             </div>
-            <div class="track">
+            <div class="track playable" data-track="4" data-src="media/Boney Files/04 - Thursdays.mp3" onclick="playTrack(this)">
                 <span class="track-number">4.</span>
-                <span class="track-title">Thursdays</span>
+                <span class="track-title-wrap">
+                    <button class="play-btn" aria-label="Play">▶</button>
+                    <span class="track-title">Thursdays</span>
+                </span>
                 <span class="track-duration">4:01</span>
             </div>
-            <div class="track">
+            <div class="track playable" data-track="5" data-src="media/Boney Files/05 - CFC Free (Cling Film Figurines) Live at Paddy's.mp3" onclick="playTrack(this)">
                 <span class="track-number">5.</span>
-                <span class="track-title">CFC Free (Cling Film Figurines) Live at Paddy's</span>
+                <span class="track-title-wrap">
+                    <button class="play-btn" aria-label="Play">▶</button>
+                    <span class="track-title">CFC Free (Cling Film Figurines) Live at Paddy's</span>
+                </span>
                 <span class="track-duration">4:37</span>
             </div>
             <div class="track">
@@ -523,7 +535,9 @@
             playerBar.classList.remove('active');
             if (currentTrackElement) {
                 currentTrackElement.classList.remove('playing');
-                currentTrackElement.querySelector('.play-btn').textContent = '▶';
+                const playBtn = currentTrackElement.querySelector('.play-btn');
+                playBtn.textContent = '▶';
+                playBtn.classList.remove('playing');
                 currentTrackElement = null;
             }
         }
@@ -577,6 +591,19 @@
                 currentTrackElement.classList.remove('playing');
                 currentTrackElement.querySelector('.play-btn').textContent = '▶';
                 currentTrackElement.querySelector('.play-btn').classList.remove('playing');
+                
+                // Auto-play next track
+                let nextTrack = currentTrackElement.nextElementSibling;
+                while (nextTrack) {
+                    if (nextTrack.classList.contains('playable')) {
+                        playTrack(nextTrack);
+                        return;
+                    }
+                    nextTrack = nextTrack.nextElementSibling;
+                }
+                
+                // No next track found, reset player
+                currentTrackElement = null;
             }
             progressFill.style.width = '0%';
         });
