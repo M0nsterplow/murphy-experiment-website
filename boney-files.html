@@ -526,7 +526,9 @@
             playerBar.classList.remove('active');
             if (currentTrackElement) {
                 currentTrackElement.classList.remove('playing');
-                currentTrackElement.querySelector('.play-btn').textContent = '▶';
+                const playBtn = currentTrackElement.querySelector('.play-btn');
+                playBtn.textContent = '▶';
+                playBtn.classList.remove('playing');
                 currentTrackElement = null;
             }
         }
