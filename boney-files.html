@@ -580,6 +580,19 @@
                 currentTrackElement.classList.remove('playing');
                 currentTrackElement.querySelector('.play-btn').textContent = '▶';
                 currentTrackElement.querySelector('.play-btn').classList.remove('playing');
+                
+                // Auto-play next track
+                let nextTrack = currentTrackElement.nextElementSibling;
+                while (nextTrack) {
+                    if (nextTrack.classList.contains('playable')) {
+                        playTrack(nextTrack);
+                        return;
+                    }
+                    nextTrack = nextTrack.nextElementSibling;
+                }
+                
+                // No next track found, reset player
+                currentTrackElement = null;
             }
             progressFill.style.width = '0%';
         });
